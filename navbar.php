@@ -121,6 +121,11 @@
                 <div class="vl-offcanvas-menu d-xl-none mb-40">
                     <nav></nav>
                 </div>
+                <div class="d-xl-none" style="margin-bottom:24px;">
+                    <a href="request-quote.php" class="vl-btn3" style="width:100%;text-align:center;">
+                        <i class="fa-solid fa-file-signature"></i> Request A Quote
+                    </a>
+                </div>
 
                 <div class="space20"></div>
                 <div class="vl-offcanvas-info">

@@ -316,9 +316,10 @@ if ($parallaxie.length && ($window.width() > 991)) {
           prevEl: ".next-arrow",
         },
      breakpoints: {
-      300:  { slidesPerView: 1, spaceBetween: 12 },  // small phones: show a peek
-      426:  { slidesPerView: 3,    spaceBetween: 14 },  // larger phones
-       }
+      300: { slidesPerView: 1, spaceBetween: 12 },
+      768: { slidesPerView: 2, spaceBetween: 16 },
+      1200: { slidesPerView: 3, spaceBetween: 20 }
+     }
     });
 
 

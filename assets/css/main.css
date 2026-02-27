@@ -4463,6 +4463,17 @@ img {
      object-fit: cover;
   border-radius: 30px;
 }
+@media (max-width: 767px) {
+  .myhero9 .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .myhero9 .hero9-thumb {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
 
 .vl-hero9_arrow {
   display: flex;
@@ -9782,11 +9793,7 @@ body {
 
 /* Mobile Fix for Product Cards */
 @media (max-width: 575px) {
-  .vl-our_products_area .row {
-    overflow-x: hidden;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
+
   
   .our-products-swiper {
     overflow: hidden;
@@ -11643,3 +11650,15 @@ body {
     height: auto;
 }
 }
+@media(max-width:480px){
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    gap: 0px;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box;
+}}

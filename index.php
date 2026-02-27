@@ -434,7 +434,7 @@
             <div class="col-xl-8 mx-auto">
                 <div class="vl-work-heading-area text-center">
                     <h3 data-aos="zoom-in" data-aos-duration="800"><img
-                            src="assets/img/icon/about-subtitle-icon-hm1.svg" alt="">Why Choose Us</h3>
+                            src="assets/img/icon/about-subtitle-icon-hm1.svg" alt="">Benefits of Oceanic Products</h3>
                     <div class="space22"></div>
                     <h2 class="text-anime-style-3" data-aos="zoom-in" data-aos-duration="900">The Oceanic Product
                         Advantage</h2>
@@ -442,7 +442,6 @@
                 </div>
             </div>
             <div class="space80"></div>
-            <div class="row">
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
                     <div class="work1-contentbox">
                         <div class="work1-box-icon">
@@ -508,7 +507,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 <!--===== WORK AREA ENDS =======-->
@@ -530,7 +528,6 @@
             </div>
             <div class="space60"></div>
 
-            <div class="row">
                 <div class="col-lg-6">
                     <div class="project1-info">
                         <div class="project1-before-thumb reveal">
@@ -563,7 +560,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
         </div>
     </div>
@@ -586,7 +582,6 @@
                 </div>
             </div>
             <div class="space60"></div>
-            <div class="row">
                 <div class="col-xl-10 mx-auto " data-aos="fade-up" data-aos-duration="900" data-aos-offset="80">
                     <div class="teasimonial_1_slider_arrows">
 
@@ -783,7 +778,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
     </div>

@@ -34,7 +34,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-md-6 col-6">
                             <div class="vl-logo">
-                                <a href="index.php"><img src="assets/img/logo/home-01-header-logo.png" alt=""></a>
+                                <a href="index.php"><img src="assets/img/logo/oceanic.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-7 d-none d-xl-block">
@@ -47,7 +47,7 @@
                                         <li>
                                             <a href="about-us.php">About Us</a>
                                         </li>
-                                        <li><a href="products.php">Products <span><i
+                                        <li><a href="products.php">Products <span> <i
                                                         class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
                                             <ul class="sub-menu">
                                                 <li><a href="marine-paints.php">Marine Paints</a></li>
@@ -58,7 +58,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="assets/V-K-Paints-Industries-Product-Catalogue.pdf"
-                                                target="_blank">Catalogue<span><i
+                                                target="_blank">Catalogue<span> <i
                                                         class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
                                             <ul class="sub-menu">
                                                 <li><a href="assets/V-K-Paints-Industries-Product-Catalogue.pdf"

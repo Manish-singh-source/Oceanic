@@ -8,18 +8,26 @@ require __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
 require __DIR__ . '/PHPMailer-master/src/SMTP.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: contact.php');
+    header('Location: request-quote.php');
     exit;
 }
 
-$firstName = trim($_POST['first_name'] ?? '');
-$phone = trim($_POST['phone'] ?? '');
-$email = trim($_POST['email'] ?? '');
-$subject = trim($_POST['subject'] ?? '');
+$fullName = trim($_POST['full_name'] ?? '');
+$contactNumber = trim($_POST['contact_number'] ?? '');
+$email = trim($_POST['email_id'] ?? '');
+$productName = trim($_POST['product_name'] ?? '');
+$typeLiter = trim($_POST['type_liter'] ?? '');
 $message = trim($_POST['message'] ?? '');
 
-if ($firstName === '' || $phone === '' || $subject === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: contact.php?status=validation_error');
+if (
+    $fullName === '' ||
+    $contactNumber === '' ||
+    $productName === '' ||
+    $typeLiter === '' ||
+    $message === '' ||
+    !filter_var($email, FILTER_VALIDATE_EMAIL)
+) {
+    header('Location: request-quote.php?status=validation_error');
     exit;
 }
 
@@ -31,14 +39,21 @@ $smtpPassword = getenv('MAIL_PASSWORD') ?: 'kcdivqkodwgvyaku';
 $smtpEncryption = getenv('MAIL_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
 $smtpFromEmail = getenv('MAIL_FROM_ADDRESS') ?: 'support@technofra.com';
 $smtpFromName = getenv('MAIL_FROM_NAME') ?: (getenv('APP_NAME') ?: 'Oceanic Website');
-$adminEmail = getenv('CONTACT_ADMIN_EMAIL') ?: $smtpUsername;
+$adminEmail = getenv('QUOTE_ADMIN_EMAIL') ?: (getenv('CONTACT_ADMIN_EMAIL') ?: $smtpUsername);
 
 if ($smtpFromName === '${APP_NAME}' || $smtpFromName === '${APP_NAME}') {
     $smtpFromName = getenv('APP_NAME') ?: 'Oceanic Website';
 }
 
-if (strtolower($smtpMailer) !== 'smtp' || $smtpHost === '' || $smtpUsername === '' || $smtpPassword === '' || $smtpFromEmail === '' || $adminEmail === '') {
-    header('Location: contact.php?status=config_error');
+if (
+    strtolower($smtpMailer) !== 'smtp' ||
+    $smtpHost === '' ||
+    $smtpUsername === '' ||
+    $smtpPassword === '' ||
+    $smtpFromEmail === '' ||
+    $adminEmail === ''
+) {
+    header('Location: request-quote.php?status=config_error');
     exit;
 }
 
@@ -116,74 +131,79 @@ function buildMailer(
 
 try {
     $logoUrl = 'assets/img/logo/home-01-header-logo.png';
-    $safeName = esc($firstName);
-    $safePhone = esc($phone);
+    $safeName = esc($fullName);
+    $safePhone = esc($contactNumber);
     $safeEmail = esc($email);
-    $safeSubject = esc($subject);
+    $safeProduct = esc($productName);
+    $safeTypeLiter = esc($typeLiter);
     $safeMessageHtml = nl2br(esc($message));
     $safeFromName = esc($smtpFromName);
 
     $adminContent = '
-      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">A new contact enquiry has been submitted from the website.</p>
+      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">A new quote request has been submitted from the website.</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border:1px solid #dbe4ee;border-radius:10px;overflow:hidden;">
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:180px;">Name</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeName . '</td></tr>
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Phone</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safePhone . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:180px;">Full Name</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeName . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Contact Number</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safePhone . '</td></tr>
         <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Email</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeEmail . '</td></tr>
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Subject</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeSubject . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Product</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeProduct . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Type / Liter</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeTypeLiter . '</td></tr>
         <tr><td style="padding:12px;background:#f8fbff;font-weight:700;vertical-align:top;border-bottom:1px solid #dbe4ee;">Message</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeMessageHtml . '</td></tr>
       </table>';
 
     $userContent = '
       <p style="margin:0 0 14px 0;font-size:14px;line-height:22px;">Hi ' . $safeName . ',</p>
-      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">Thank you for contacting us. We have received your message and our team will get back to you shortly.</p>
+      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">Thank you for your quote request. We have received your details and our team will get back to you shortly.</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border:1px solid #dbe4ee;border-radius:10px;overflow:hidden;">
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:180px;">Subject</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeSubject . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:180px;">Product</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeProduct . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Type / Liter</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeTypeLiter . '</td></tr>
         <tr><td style="padding:12px;background:#f8fbff;font-weight:700;vertical-align:top;">Message</td><td style="padding:12px;">' . $safeMessageHtml . '</td></tr>
       </table>
       <p style="margin:16px 0 0 0;font-size:14px;line-height:22px;">Regards,<br>' . $safeFromName . '</p>';
 
     $adminMailer = buildMailer($smtpHost, $smtpPort, $smtpUsername, $smtpPassword, $smtpEncryption, $smtpFromEmail, $smtpFromName);
     $adminMailer->addAddress($adminEmail, 'Admin');
-    $adminMailer->addReplyTo($email, $firstName);
-    $adminMailer->Subject = 'New Contact Form Submission: ' . $subject;
+    $adminMailer->addReplyTo($email, $fullName);
+    $adminMailer->Subject = 'New Quote Request: ' . $productName;
     $adminMailer->Body = renderEmailTemplate(
-        'New Contact Form Submission',
-        'Website enquiry details are listed below.',
+        'New Quote Request',
+        'Website quote request details are listed below.',
         $adminContent,
-        'This is an automated message from your website contact form.',
+        'This is an automated message from your website quote form.',
         $logoUrl
     );
     $adminMailer->AltBody =
-        "New contact form enquiry received.\n\n" .
-        "Name: {$firstName}\n" .
-        "Phone: {$phone}\n" .
+        "New quote request received.\n\n" .
+        "Full Name: {$fullName}\n" .
+        "Contact Number: {$contactNumber}\n" .
         "Email: {$email}\n" .
-        "Subject: {$subject}\n" .
+        "Product: {$productName}\n" .
+        "Type / Liter: {$typeLiter}\n" .
         "Message:\n{$message}";
     $adminMailer->send();
 
     $userMailer = buildMailer($smtpHost, $smtpPort, $smtpUsername, $smtpPassword, $smtpEncryption, $smtpFromEmail, $smtpFromName);
-    $userMailer->addAddress($email, $firstName);
-    $userMailer->Subject = 'Thank you for contacting us';
+    $userMailer->addAddress($email, $fullName);
+    $userMailer->Subject = 'Thank you for your quote request';
     $userMailer->Body = renderEmailTemplate(
-        'Thank You For Contacting Us',
-        'We have received your enquiry successfully.',
+        'Thank You For Your Quote Request',
+        'We have received your request successfully.',
         $userContent,
         'Need help urgently? Reply to this email and our team will assist you.',
         $logoUrl
     );
     $userMailer->AltBody =
-        "Hi {$firstName},\n\n" .
-        "Thank you for contacting us. We have received your message and our team will get back to you soon.\n\n" .
+        "Hi {$fullName},\n\n" .
+        "Thank you for your quote request. We have received your details and our team will get back to you soon.\n\n" .
         "Your submitted details:\n" .
-        "Subject: {$subject}\n" .
+        "Product: {$productName}\n" .
+        "Type / Liter: {$typeLiter}\n" .
         "Message: {$message}\n\n" .
         "Regards,\n{$smtpFromName}";
     $userMailer->send();
 
-    header('Location: contact.php?status=success');
+    header('Location: request-quote.php?status=success');
     exit;
 } catch (Exception $e) {
-    header('Location: contact.php?status=mail_error');
+    header('Location: request-quote.php?status=mail_error');
     exit;
 }

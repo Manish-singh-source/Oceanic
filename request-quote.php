@@ -91,6 +91,28 @@
     padding-bottom: 0;
 }
 
+.quote-form-card .nice-select {
+    width: 100%;
+    height: 52px;
+    line-height: 50px;
+    border: 1px solid #d7e2ee;
+    border-radius: 8px;
+    padding: 0 40px 0 16px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.quote-form-card .nice-select .current {
+    display: block;
+    line-height: 50px;
+    font-size: 16px;
+    color: #0a2540;
+}
+
+.quote-form-card .nice-select:after {
+    right: 16px;
+}
+
 .quote-form-card textarea {
     min-height: 140px;
     resize: vertical;
@@ -147,7 +169,20 @@
                 <div class="quote-form-card">
                     <h2>Get Your Quote</h2>
                     <p>Please fill all details below.</p>
-                    <form action="#" method="post">
+                    <?php if (isset($_GET['status'])): ?>
+                        <div style="margin-bottom:16px;padding:12px;border-radius:6px;background:#ffffff;">
+                            <?php if ($_GET['status'] === 'success'): ?>
+                                <p style="margin:0;color:#0a7a26;">Thank you! Your quote request has been sent successfully.</p>
+                            <?php elseif ($_GET['status'] === 'validation_error'): ?>
+                                <p style="margin:0;color:#b94a48;">Please fill all required fields with valid details.</p>
+                            <?php elseif ($_GET['status'] === 'mail_error'): ?>
+                                <p style="margin:0;color:#b94a48;">Unable to send email right now. Please try again later.</p>
+                            <?php elseif ($_GET['status'] === 'config_error'): ?>
+                                <p style="margin:0;color:#b94a48;">Email setup is incomplete. Please contact the administrator.</p>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                    <form id="quoteForm" action="send-request-quote.php" method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="full_name">Full Name</label>
@@ -163,22 +198,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="product_name">Product</label>
-                                <select id="product_name" name="product_name" required>
-                                    <option value="">Select Product</option>
-                                    <option>Oceanic Premium Antifouling Paint</option>
-                                    <option>Oceanic Premium Antifouling Paint Fibre Coat Plus</option>
-                                    <option>Oceanic Sea Shield Antifouling</option>
-                                    <option>Thermochromic + Antimicrobial QD Enamel</option>
-                                    <option>Self Polishing + Heat Reflective Epoxy Coatings</option>
-                                    <option>Oceanic Multipurpose Primer</option>
-                                    <option>Oceanic Ultra Protek</option>
-                                    <option>Oceanic Ultra Plus</option>
-                                    <option>Shine Interior Emulsion</option>
-                                    <option>Exterior Emulsion</option>
-                                    <option>Oceanic Acrylic Distemper</option>
-                                    <option>Oceanic Base Coat Primer</option>
-                                    <option>Oceanic Texture</option>
-                                </select>
+                                <input type="text" id="product_name" name="product_name" placeholder="Enter Product Name" required>
                             </div>
                             <div class="col-12">
                                 <label for="type_liter">Type / Liter</label>
@@ -189,7 +209,7 @@
                                 <textarea id="message" name="message" placeholder="Write your message" required></textarea>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="vl-btn3">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
+                                <button id="quoteSubmitBtn" type="submit" class="vl-btn3">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </form>
@@ -199,4 +219,29 @@
     </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('quoteForm');
+    var submitBtn = document.getElementById('quoteSubmitBtn');
+
+    if (!form || !submitBtn) {
+        return;
+    }
+
+    form.addEventListener('submit', function () {
+        if (submitBtn.disabled) {
+            return false;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Loading...';
+        submitBtn.style.opacity = '0.7';
+        submitBtn.style.cursor = 'not-allowed';
+    });
+});
+</script>
 <?php include 'footer.php'; ?>
+
+
+
+

@@ -45,7 +45,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="hero9-thumb">
-                    <img src="assets/img/hero/hero-9-thumb3.png" alt="">
+                    <img src="assets/img/hero/decorative.png" alt="">
                 </div>
             </div>
             <div class="swiper-slide">
@@ -60,7 +60,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="hero9-thumb">
-                    <img src="assets/img/hero/hero-9-thumb5.png" alt="">
+                    <img src="assets/img/hero/decorative1.png" alt="">
                 </div>
             </div>
         </div>
@@ -180,7 +180,7 @@
                                 src="assets/img/icon/about-subtitle-icon-hm1.svg" alt="">Oceanic Product List</h3>
                         <div class="space22"></div>
                         <h2 class="title text-anime-style-3" data-aos="fade-right" data-aos-duration="900">Explore
-                            Oceanic Coatings for <br> Marine, Industrial and Decorative Needs</h2>
+                            Oceanic Coatings for Marine, Industrial and Decorative Needs</h2>
                     </div>
                     <div class="space20"></div>
                     <div class="our_products_tabs" data-aos="fade-right" data-aos-duration="1000">

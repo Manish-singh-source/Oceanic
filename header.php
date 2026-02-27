@@ -7,7 +7,7 @@
      <title>Oceanic</title>
 
      <!--=====FAB ICON=======-->
-    <!-- <link rel="shortcut icon" href="assets/img/logo/wallax-fab-logo.svg" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="assets/img/logo/fav.png" type="image/x-icon">
     
     <!--===== FONT AWESOME CSS =====-->
     <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">

@@ -1,0 +1,1592 @@
+
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>V.K. Paints Industries - Product Catalogue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --ocean-deep: #0a1628;
+            --ocean-primary: #1e3a5f;
+            --ocean-secondary: #2e5c8a;
+            --ocean-light: #4a90b8;
+            --aqua: #00d4ff;
+            --aqua-light: #7dd3fc;
+            --coral: #ff6b6b;
+            --sand: #f5f0e8;
+            --white: #ffffff;
+            --gradient-ocean: linear-gradient(135deg, #0a1628 0%, #1e3a5f 50%, #2e5c8a 100%);
+            --gradient-aqua: linear-gradient(135deg, #00d4ff 0%, #0891b2 100%);
+            --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --shadow-glow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e8e8e8;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Page Container */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+            border-radius: 8px;
+        }
+
+        /* Paint Splash Decorations */
+        .paint-splash {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .paint-splash-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--ocean-primary);
+            top: -150px;
+            right: -100px;
+            border-radius: 60% 40% 50% 50%;
+        }
+
+        .paint-splash-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--aqua);
+            bottom: -80px;
+            left: -80px;
+            border-radius: 40% 60% 70% 30%;
+        }
+
+        .paint-splash-3 {
+            width: 200px;
+            height: 200px;
+            background: var(--ocean-light);
+            top: 40%;
+            right: -50px;
+            border-radius: 50% 50% 40% 60%;
+        }
+
+        .paint-drop {
+            position: absolute;
+            width: 15px;
+            height: 20px;
+            background: var(--aqua);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .paint-drop-1 { top: 15%; left: 8%; transform: rotate(-20deg); }
+        .paint-drop-2 { top: 25%; right: 12%; transform: rotate(15deg); width: 12px; height: 16px; }
+        .paint-drop-3 { top: 60%; left: 5%; transform: rotate(10deg); width: 10px; height: 14px; }
+        .paint-drop-4 { bottom: 20%; right: 8%; transform: rotate(-10deg); }
+        .paint-drop-5 { top: 45%; right: 6%; width: 8px; height: 12px; }
+
+        .paint-stroke {
+            position: absolute;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--aqua), transparent);
+            opacity: 0.2;
+            border-radius: 2px;
+            pointer-events: none;
+        }
+
+        .paint-stroke-1 { width: 150px; top: 12%; left: 5%; transform: rotate(-5deg); }
+        .paint-stroke-2 { width: 100px; top: 35%; right: 8%; transform: rotate(8deg); }
+        .paint-stroke-3 { width: 120px; bottom: 25%; left: 10%; transform: rotate(-3deg); }
+
+        /* Paint Splatters */
+        .paint-splatter {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+
+        .splatter-1 {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            right: 5%;
+        }
+
+        .splatter-1::before,
+        .splatter-1::after {
+            content: '';
+            position: absolute;
+            background: var(--ocean-primary);
+            border-radius: 50%;
+        }
+
+        .splatter-1::before {
+            width: 40px;
+            height: 40px;
+            top: 20px;
+            left: 20px;
+        }
+
+        .splatter-1::after {
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            left: 45px;
+        }
+
+        .splatter-dot {
+            position: absolute;
+            background: var(--ocean-primary);
+            border-radius: 50%;
+        }
+
+        .splatter-1 .dot-1 { width: 15px; height: 15px; top: 50px; left: 10px; }
+        .splatter-1 .dot-2 { width: 10px; height: 10px; top: 15px; left: 25px; }
+        .splatter-1 .dot-3 { width: 8px; height: 8px; top: 55px; left: 55px; }
+
+        /* Cover Page */
+        .cover {
+            background: var(--gradient-ocean);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .cover .paint-splash-1 {
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 1;
+        }
+
+        .cover .paint-splash-2 {
+            background: rgba(0, 212, 255, 0.1);
+            opacity: 1;
+        }
+
+        .cover .paint-drop {
+            background: rgba(255, 255, 255, 0.1);
+            opacity: 0.3;
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            padding: 50px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo-container {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .cover-logo {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.5), var(--shadow-soft);
+            border: 4px solid var(--aqua);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cover-logo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 0 60px rgba(0, 212, 255, 0.7), var(--shadow-soft);
+        }
+
+        .cover-logo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .cover-logo img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-logo span {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--ocean-primary);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #fff 0%, var(--aqua-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cover h2 {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 15px;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            color: var(--aqua-light);
+        }
+
+        .cover-tagline {
+            font-size: 16px;
+            font-weight: 400;
+            max-width: 650px;
+            line-height: 1.8;
+            margin-top: 40px;
+            padding: 30px;
+            border: 2px solid rgba(0, 212, 255, 0.4);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-tagline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .cover-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .cover-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .cover-icon:hover {
+            transform: translateY(-10px);
+        }
+
+        .cover-icon i {
+            font-size: 32px;
+            color: var(--aqua);
+        }
+
+        .cover-icon span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cover-footer {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            letter-spacing: 3px;
+            font-weight: 500;
+            color: var(--aqua-light);
+        }
+
+        /* Content Pages */
+        .content-page {
+            padding: 40px;
+            background: white;
+            min-height: 297mm;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--ocean-primary);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 150px;
+            height: 3px;
+            background: var(--gradient-aqua);
+        }
+
+        .page-header-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-ocean);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .page-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--ocean-primary);
+            margin-bottom: 5px;
+        }
+
+        .page-header p {
+            color: var(--ocean-light);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 500;
+        }
+
+        /* Mission Vision Section */
+        .mv-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .mv-box {
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mv-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .mission-box {
+            background: var(--gradient-ocean);
+            color: white;
+        }
+
+        .vision-box {
+            background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+            color: white;
+        }
+
+        .mv-box h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mv-box h3 i {
+            font-size: 28px;
+            color: var(--aqua);
+        }
+
+        .mv-box p {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .mv-box ul {
+            margin: 15px 0;
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .mv-box li {
+            position: relative;
+        }
+
+        .mv-box li::marker {
+            color: var(--aqua);
+        }
+
+        /* Values Section */
+        .values-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 35px;
+            border-radius: 20px;
+            border: 2px solid #e0f2fe;
+            flex: 1;
+            position: relative;
+        }
+
+        .values-section h3 {
+            color: var(--ocean-primary);
+            font-size: 32px;
+            margin-bottom: 25px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .values-section h3 i {
+            color: var(--aqua);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .value-item {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--ocean-primary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-ocean);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .value-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .value-item:hover::before {
+            opacity: 1;
+        }
+
+        .value-item:hover h4,
+        .value-item:hover p,
+        .value-item:hover i {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-item i {
+            font-size: 28px;
+            color: var(--ocean-primary);
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .value-item h4 {
+            color: var(--ocean-primary);
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .value-item p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+            transition: color 0.3s ease;
+        }
+
+        /* Product Pages */
+        .product-category {
+            margin-bottom: 25px;
+        }
+
+        .category-header {
+            background: var(--gradient-ocean);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            backdrop-filter: blur(10px);
+        }
+
+        .category-header h3 {
+            font-size: 32px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-header p {
+            opacity: 0.9;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 25px;
+            border: 2px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gradient-aqua);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--aqua);
+        }
+
+        .product-card h4 {
+            color: var(--ocean-primary);
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-card h4 i {
+            color: var(--aqua);
+            font-size: 18px;
+        }
+
+        .product-card > p {
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .product-features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 13px;
+            color: #475569;
+            border-bottom: 1px dashed #cbd5e1;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+
+        .product-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-size: 14px;
+            top: 8px;
+        }
+
+        .product-card:hover .product-features li {
+            color: var(--ocean-primary);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--gradient-ocean);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.5;
+        }
+
+        .highlight-box h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 2;
+        }
+
+        .highlight-box h3 i {
+            color: var(--aqua);
+            margin-right: 10px;
+        }
+
+        .highlight-box p {
+            font-size: 15px;
+            opacity: 0.95;
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            line-height: 1.8;
+        }
+
+        /* USP Section */
+        .usp-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .usp-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            transition: all 0.4s ease;
+        }
+
+        .usp-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--aqua);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .usp-number {
+            position: absolute;
+            top: -20px;
+            left: 25px;
+            background: var(--gradient-aqua);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: var(--shadow-soft);
+            border: 3px solid white;
+        }
+
+        .usp-card h4 {
+            color: var(--ocean-primary);
+            font-size: 20px;
+            margin-bottom: 12px;
+            margin-top: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .usp-card h4 i {
+            color: var(--aqua);
+        }
+
+        .usp-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 13px;
+        }
+
+        /* Contact Page */
+        .contact-page {
+            background: var(--gradient-ocean);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            min-height: 297mm;
+        }
+
+        .contact-page .paint-splash-1 {
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 1;
+        }
+
+        .contact-page .paint-splash-2 {
+            background: rgba(0, 212, 255, 0.1);
+            opacity: 1;
+        }
+
+        .contact-content {
+            padding: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-page h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #fff 0%, var(--aqua-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 35px 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--aqua);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .contact-item i {
+            font-size: 36px;
+            color: var(--aqua);
+            margin-bottom: 15px;
+        }
+
+        .contact-item h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .social-links a:hover {
+            background: var(--aqua);
+            transform: translateY(-5px) rotate(360deg);
+            border-color: var(--aqua);
+        }
+
+        .contact-footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-footer p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .contact-footer p:last-child {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-top: 10px;
+        }
+
+        /* Application Areas Grid */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .app-item:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        .app-item i {
+            color: var(--aqua);
+        }
+
+        /* Print Styles */
+        @media print {
+            body { background: white; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                height: 297mm;
+            }
+            .paint-splash, .paint-drop, .paint-stroke, .paint-splatter {
+                opacity: 0.05;
+            }
+            .product-card, .usp-card, .value-item, .contact-item {
+                break-inside: avoid;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 220mm) {
+            .page {
+                width: 100%;
+                margin: 10px;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<body>
+
+    <!-- Page 1: Cover -->
+    <div class="page cover">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-2"></div>
+        <div class="paint-drop paint-drop-1"></div>
+        <div class="paint-drop paint-drop-2"></div>
+        <div class="paint-drop paint-drop-3"></div>
+        <div class="paint-drop paint-drop-4"></div>
+        
+        <div class="cover-content">
+            <div class="logo-container">
+                <div class="cover-logo">
+                    <img src="./img/logo/home-01-header-logo.png" alt="">
+                </div>
+            </div>
+            <h1>V.K. Paints</h1>
+            <h2>INDUSTRIES</h2>
+            <div class="cover-tagline">
+                Premium Marine Coatings • Decorative Paints • Industrial Protective Systems<br/>
+                Engineered for Indian Environmental &amp; Coastal Conditions
+            </div>
+            <div class="cover-icons">
+                <div class="cover-icon">
+                    <i class="fas fa-ship"></i>
+                    <span>Marine</span>
+                </div>
+                <div class="cover-icon">
+                    <i class="fas fa-home"></i>
+                    <span>Decorative</span>
+                </div>
+                <div class="cover-icon">
+                    <i class="fas fa-industry"></i>
+                    <span>Industrial</span>
+                </div>
+            </div>
+        </div>
+        <div class="cover-footer">
+            <i class="fas fa-water"></i> INNOVATION IN COATING TECHNOLOGY • EST. 2024 <i class="fas fa-water"></i>
+        </div>
+    </div>
+
+    <!-- Page 2: About Us -->
+    <div class="page content-page">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-2"></div>
+        <div class="paint-drop paint-drop-1"></div>
+        <div class="paint-drop paint-drop-2"></div>
+        <div class="paint-stroke paint-stroke-1"></div>
+        <div class="paint-splatter splatter-1">
+            <div class="splatter-dot dot-1"></div>
+            <div class="splatter-dot dot-2"></div>
+            <div class="splatter-dot dot-3"></div>
+        </div>
+
+        <div class="page-header">
+            <div class="page-header-icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <div>
+                <h2>About Us</h2>
+                <p>Company Profile &amp; Philosophy</p>
+            </div>
+        </div>
+        
+        <div class="mv-container">
+            <div class="mv-box mission-box fade-in">
+                <h3><i class="fas fa-bullseye"></i> MISSION</h3>
+                <p>Our mission is to develop and manufacture high-performance <strong>Marine Coatings</strong>, <strong>Innovative Decorative Paints</strong>, and <strong>Industrial Protective Coating Systems</strong> that are engineered for durability, corrosion resistance, and long-term performance in Indian environmental and coastal conditions.</p>
+                <p style="margin-top: 12px;">We aim to deliver technically advanced yet cost-effective coating solutions that protect infrastructure, vessels, and residential spaces while meeting the growing demand for reliable indigenous paint manufacturing in India.</p>
+            </div>
+            
+            <div class="mv-box vision-box fade-in">
+                <h3><i class="fas fa-eye"></i> VISION</h3>
+                <p>To become a leading Indian manufacturer in the field of:</p>
+                <ul>
+                    <li>Marine &amp; Antifouling Coatings</li>
+                    <li>Unique Decorative Paint Solutions</li>
+                    <li>Industrial Protective Coating Systems</li>
+                </ul>
+                <p style="margin-top: 12px;">Our vision is to establish ourselves as a trusted brand known for manufacturing specialized coatings that enhance surface life, reduce maintenance costs, and perform effectively in harsh marine and industrial environments.</p>
+            </div>
+        </div>
+        
+        <div class="values-section fade-in">
+            <h3><i class="fas fa-gem"></i> CORE VALUES</h3>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Innovation</h4>
+                    <p>Continuous advancement in coating technology</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Protection</h4>
+                    <p>Long-term surface protection solutions</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Performance</h4>
+                    <p>Excellence in harsh environments</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-award"></i>
+                    <h4>Quality</h4>
+                    <p>Consistency in every batch</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-users"></i>
+                    <h4>Customer First</h4>
+                    <p>Manufacturing focused on needs</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Sustainability</h4>
+                    <p>Responsible production practices</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Decorative Paints -->
+    <div class="page content-page">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-3"></div>
+        <div class="paint-drop paint-drop-1"></div>
+        <div class="paint-drop paint-drop-3"></div>
+        <div class="paint-drop paint-drop-4"></div>
+        <div class="paint-stroke paint-stroke-2"></div>
+
+        <div class="page-header">
+            <div class="page-header-icon">
+                <i class="fas fa-paint-roller"></i>
+            </div>
+            <div>
+                <h2>Decorative Paints</h2>
+                <p>Interior &amp; Exterior Solutions</p>
+            </div>
+        </div>
+        
+        <div class="product-category">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div>
+                    <h3>Interior Decorative Paints</h3>
+                    <p>100% Washable Technology for Modern Homes</p>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-star"></i> Premium Interior Emulsion</h4>
+                    <p>High-quality washable interior paint with superior stain resistance</p>
+                    <ul class="product-features">
+                        <li>100% Washable Technology</li>
+                        <li>Superior stain resistance</li>
+                        <li>Easy cleaning without damage</li>
+                        <li>Long-lasting brightness</li>
+                        <li>Anti-fungal properties</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-gem"></i> Luxury Silk Finish</h4>
+                    <p>Premium smooth finish for upscale interiors</p>
+                    <ul class="product-features">
+                        <li>Smooth luxurious finish</li>
+                        <li>Pearl-like sheen effect</li>
+                        <li>Excellent coverage</li>
+                        <li>Low VOC formulation</li>
+                        <li>Quick drying formula</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-category">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div>
+                    <h3>Exterior Protective Paints</h3>
+                    <p>Weather-Resistant Coatings for Indian Climates</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box fade-in">
+                <h3><i class="fas fa-certificate"></i> Our Key Differentiator</h3>
+                <p>Specially engineered for Indian climatic conditions with enhanced resistance to rainwater seepage, dust-repellent surface technology, and improved anti-algal &amp; anti-fungal protection.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-cloud-rain"></i> Weather Shield Exterior</h4>
+                    <p>High-performance exterior emulsion for extreme weather</p>
+                    <ul class="product-features">
+                        <li>Heavy rainfall resistance</li>
+                        <li>UV radiation protection</li>
+                        <li>Anti-algal &amp; anti-fungal</li>
+                        <li>Dust &amp; pollution repellent</li>
+                        <li>Long-term color retention</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-water"></i> Coastal Guard Exterior</h4>
+                    <p>Specialized for coastal and high humidity areas</p>
+                    <ul class="product-features">
+                        <li>Saline environment resistant</li>
+                        <li>High humidity protection</li>
+                        <li>Salt spray resistance</li>
+                        <li>Enhanced waterproofing</li>
+                        <li>Reduced repainting frequency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Marine Coatings -->
+    <div class="page content-page">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-2"></div>
+        <div class="paint-drop paint-drop-2"></div>
+        <div class="paint-drop paint-drop-5"></div>
+        <div class="paint-stroke paint-stroke-1"></div>
+        <div class="paint-stroke paint-stroke-3"></div>
+
+        <div class="page-header">
+            <div class="page-header-icon">
+                <i class="fas fa-ship"></i>
+            </div>
+            <div>
+                <h2>Marine Coatings</h2>
+                <p>Advanced Protection for Vessels &amp; Offshore Structures</p>
+            </div>
+        </div>
+        
+        <div class="product-category">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-anchor"></i>
+                </div>
+                <div>
+                    <h3>Marine &amp; Antifouling Systems</h3>
+                    <p>High Performance Marine Paint Systems</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box fade-in">
+                <h3><i class="fas fa-medal"></i> Quality, High Performance &amp; High Resistance</h3>
+                <p>Our marine coatings deliver anti-fouling protection, saltwater resistance, and anti-corrosion performance while reducing hull drag and increasing vessel operational efficiency.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-shield-virus"></i> Antifouling Coating System</h4>
+                    <p>Advanced protection against marine organism growth</p>
+                    <ul class="product-features">
+                        <li>Anti-fouling protection</li>
+                        <li>Reduced hull drag</li>
+                        <li>Increased fuel efficiency</li>
+                        <li>Long service life</li>
+                        <li>Smooth self-polishing</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-layer-group"></i> Marine Anti-Corrosive Primer</h4>
+                    <p>High-build epoxy primer for underwater areas</p>
+                    <ul class="product-features">
+                        <li>Saltwater corrosion resistance</li>
+                        <li>Submerged condition durability</li>
+                        <li>Excellent adhesion</li>
+                        <li>High build formula</li>
+                        <li>Compatible with topcoats</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-ship"></i> Hull Protection System</h4>
+                    <p>Complete hull coating solution</p>
+                    <ul class="product-features">
+                        <li>Hull degradation prevention</li>
+                        <li>Extended coating life cycle</li>
+                        <li>Reduced dry dock maintenance</li>
+                        <li>Impact resistance</li>
+                        <li>Chemical resistance</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-water"></i> Ballast Tank Coating</h4>
+                    <p>Protection for water ballast tanks</p>
+                    <ul class="product-features">
+                        <li>Immersion service protection</li>
+                        <li>Abrasion resistance</li>
+                        <li>Edge retention</li>
+                        <li>Long-term durability</li>
+                        <li>Easy application</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Industrial Coatings -->
+    <div class="page content-page">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-3"></div>
+        <div class="paint-drop paint-drop-1"></div>
+        <div class="paint-drop paint-drop-3"></div>
+        <div class="paint-drop paint-drop-4"></div>
+        <div class="paint-splatter splatter-1">
+            <div class="splatter-dot dot-1"></div>
+            <div class="splatter-dot dot-2"></div>
+            <div class="splatter-dot dot-3"></div>
+        </div>
+
+        <div class="page-header">
+            <div class="page-header-icon">
+                <i class="fas fa-industry"></i>
+            </div>
+            <div>
+                <h2>Industrial Coatings</h2>
+                <p>Heavy-Duty Protection for Industrial Assets</p>
+            </div>
+        </div>
+        
+        <div class="product-category">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div>
+                    <h3>Industrial Protective Systems</h3>
+                    <p>Corrosion Protection for Critical Infrastructure</p>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-building"></i> Structural Steel Coating</h4>
+                    <p>Heavy-duty protection for steel structures</p>
+                    <ul class="product-features">
+                        <li>Corrosive environment protection</li>
+                        <li>High build epoxy formula</li>
+                        <li>Excellent adhesion to steel</li>
+                        <li>UV resistant topcoat compatible</li>
+                        <li>Long maintenance intervals</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-cog"></i> Machinery Enamel</h4>
+                    <p>Protective coating for industrial equipment</p>
+                    <ul class="product-features">
+                        <li>Chemical resistance</li>
+                        <li>Oil &amp; grease resistant</li>
+                        <li>High gloss finish</li>
+                        <li>Impact resistant</li>
+                        <li>Heat resistant options</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-umbrella-beach"></i> Coastal Infrastructure Paint</h4>
+                    <p>Specialized for coastal industrial structures</p>
+                    <ul class="product-features">
+                        <li>Saline atmosphere resistance</li>
+                        <li>High humidity protection</li>
+                        <li>Concrete &amp; steel compatible</li>
+                        <li>Weathering resistance</li>
+                        <li>Anti-carbonation properties</li>
+                    </ul>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <h4><i class="fas fa-flask"></i> Chemical Resistant Coating</h4>
+                    <p>Protection against aggressive chemicals</p>
+                    <ul class="product-features">
+                        <li>Acid &amp; alkali resistance</li>
+                        <li>Solvent resistance</li>
+                        <li>High temperature options</li>
+                        <li>Tank lining applications</li>
+                        <li>Food grade options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box fade-in">
+            <h3><i class="fas fa-map-marked-alt"></i> Application Areas</h3>
+            <div class="app-grid">
+                <div class="app-item"><i class="fas fa-bolt"></i> Power Plants</div>
+                <div class="app-item"><i class="fas fa-oil-can"></i> Refineries</div>
+                <div class="app-item"><i class="fas fa-flask"></i> Chemical Plants</div>
+                <div class="app-item"><i class="fas fa-road"></i> Bridges</div>
+                <div class="app-item"><i class="fas fa-database"></i> Storage Tanks</div>
+                <div class="app-item"><i class="fas fa-stream"></i> Pipelines</div>
+                <div class="app-item"><i class="fas fa-water"></i> Offshore Platforms</div>
+                <div class="app-item"><i class="fas fa-factory"></i> Manufacturing Units</div>
+                <div class="app-item"><i class="fas fa-ship"></i> Port Structures</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Why Choose Us -->
+    <div class="page content-page">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-2"></div>
+        <div class="paint-drop paint-drop-2"></div>
+        <div class="paint-drop paint-drop-5"></div>
+        <div class="paint-stroke paint-stroke-1"></div>
+        <div class="paint-stroke paint-stroke-2"></div>
+
+        <div class="page-header">
+            <div class="page-header-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div>
+                <h2>Why Choose V.K. Paints?</h2>
+                <p>Our Unique Selling Propositions</p>
+            </div>
+        </div>
+        
+        <div class="usp-container">
+            <div class="usp-card fade-in">
+                <div class="usp-number">01</div>
+                <h4><i class="fas fa-globe-asia"></i> Indian Climate Engineered</h4>
+                <p>Unlike conventional paints, our coatings are specifically formulated to withstand Indian climatic challenges including heavy rainfall, coastal humidity, UV exposure, and saline environments.</p>
+            </div>
+            
+            <div class="usp-card fade-in">
+                <div class="usp-number">02</div>
+                <h4><i class="fas fa-broom"></i> 100% Washable Technology</h4>
+                <p>Our interior paints feature true washable technology allowing easy stain removal without affecting the paint film, maintaining long-lasting brightness and smooth finish.</p>
+            </div>
+            
+            <div class="usp-card fade-in">
+                <div class="usp-number">03</div>
+                <h4><i class="fas fa-ship"></i> Marine Expertise</h4>
+                <p>Specialized marine coatings with anti-fouling protection, saltwater resistance, and anti-corrosion performance that reduce hull drag and increase vessel operational efficiency.</p>
+            </div>
+            
+            <div class="usp-card fade-in">
+                <div class="usp-number">04</div>
+                <h4><i class="fas fa-rupee-sign"></i> Cost-Effective Solutions</h4>
+                <p>We bridge the gap between affordability and performance, offering technically advanced coating solutions at competitive prices with reduced maintenance costs.</p>
+            </div>
+            
+            <div class="usp-card fade-in">
+                <div class="usp-number">05</div>
+                <h4><i class="fas fa-industry"></i> In-House Manufacturing</h4>
+                <p>Complete control over formulation and production ensures quality consistency, customization capabilities, and reliable supply chain for all your coating needs.</p>
+            </div>
+            
+            <div class="usp-card fade-in">
+                <div class="usp-number">06</div>
+                <h4><i class="fas fa-map-marker-alt"></i> Rural &amp; Coastal Focus</h4>
+                <p>Our journey began serving rural and coastal regions where traditional paints fail. We understand harsh weather, humidity, and saline conditions better than anyone.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box fade-in">
+            <h3><i class="fas fa-check-circle"></i> Quality Assurance</h3>
+            <p>Every batch undergoes rigorous testing for adhesion, coverage, washability, and weather resistance. Our coatings meet industry standards for performance and durability.</p>
+        </div>
+    </div>
+
+    <!-- Page 7: Contact -->
+    <div class="page contact-page">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-2"></div>
+        <div class="paint-drop paint-drop-1"></div>
+        <div class="paint-drop paint-drop-2"></div>
+        <div class="paint-drop paint-drop-3"></div>
+        <div class="paint-drop paint-drop-4"></div>
+        
+        <div class="contact-content">
+            <div class="logo-container">
+                <div class="cover-logo" style="width: 120px; height: 120px;">
+                     <img src="./img/logo/home-01-header-logo.png" alt="">
+                </div>
+            </div>
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">Partner with us for premium coating solutions</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Address</h4>
+                    <p>V.K. Paints Industries<br/>[Your Address]<br/>[City, State, PIN]</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Contact</h4>
+                    <p>Phone: [Your Number]<br/>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f49d9a929bb4829f84959d9a8087da979b99">[email&#160;protected]</a><br/>Web: www.vkpaints.com</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Business</h4>
+                    <p>Marine Coatings<br/>Decorative Paints<br/>Industrial Systems</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="contact-footer">
+                <p><i class="fas fa-water"></i> © 2024 V.K. Paints Industries. All Rights Reserved. <i class="fas fa-water"></i></p>
+                <p>Innovation in Coating Technology</p>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>

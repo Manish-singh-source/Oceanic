@@ -385,7 +385,7 @@
                                 src="assets/img/icon/about-subtitle-icon-hm1.svg" alt="">Why Choose Us</h3>
                         <div class="space22"></div>
                         <h2 class="title text-anime-style-3" data-aos="zoom-in" data-aos-duration="800">Why Oceanic
-                            Products Are <br> Trusted Across Industries</h2>
+                            Products Are Trusted Across Industries</h2>
                     </div>
                 </div>
             </div>

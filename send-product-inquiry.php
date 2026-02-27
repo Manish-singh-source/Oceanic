@@ -8,7 +8,7 @@ require __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
 require __DIR__ . '/PHPMailer-master/src/SMTP.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: request-quote.php');
+    header('Location: product-oceanic-premium-antifouling-paint.php');
     exit;
 }
 
@@ -18,10 +18,10 @@ $email = trim($_POST['email_id'] ?? '');
 $productName = trim($_POST['product_name'] ?? '');
 $typeLiter = trim($_POST['type_liter'] ?? '');
 $message = trim($_POST['message'] ?? '');
-$redirectTo = trim($_POST['redirect_to'] ?? 'request-quote.php');
+$redirectTo = trim($_POST['redirect_to'] ?? 'product-oceanic-premium-antifouling-paint.php');
 
 if ($redirectTo === '' || preg_match('/^https?:\/\//i', $redirectTo) || strpos($redirectTo, '..') !== false) {
-    $redirectTo = 'request-quote.php';
+    $redirectTo = 'product-oceanic-premium-antifouling-paint.php';
 }
 
 if (
@@ -32,7 +32,7 @@ if (
     $message === '' ||
     !filter_var($email, FILTER_VALIDATE_EMAIL)
 ) {
-    header('Location: ' . $redirectTo . '?status=validation_error');
+    header('Location: ' . $redirectTo . '?status=validation_error#inquiry-section');
     exit;
 }
 
@@ -58,22 +58,22 @@ if (
     $smtpFromEmail === '' ||
     $adminEmail === ''
 ) {
-    header('Location: ' . $redirectTo . '?status=config_error');
+    header('Location: ' . $redirectTo . '?status=config_error#inquiry-section');
     exit;
 }
 
-function esc(string $value): string
+function escInquiry(string $value): string
 {
     return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
 
-function renderEmailTemplate(string $title, string $subtitle, string $contentHtml, string $footerText, string $logoUrl = ''): string
+function renderInquiryEmailTemplate(string $title, string $subtitle, string $contentHtml, string $footerText, string $logoUrl = ''): string
 {
-    $safeTitle = esc($title);
-    $safeSubtitle = esc($subtitle);
-    $safeFooterText = esc($footerText);
+    $safeTitle = escInquiry($title);
+    $safeSubtitle = escInquiry($subtitle);
+    $safeFooterText = escInquiry($footerText);
     $logoHtml = $logoUrl !== ''
-        ? '<img src="' . esc($logoUrl) . '" alt="Logo" width="150" style="display:block;margin:0 auto 16px auto;">'
+        ? '<img src="' . escInquiry($logoUrl) . '" alt="Logo" width="150" style="display:block;margin:0 auto 16px auto;">'
         : '';
 
     return '
@@ -112,7 +112,7 @@ function renderEmailTemplate(string $title, string $subtitle, string $contentHtm
 </html>';
 }
 
-function buildMailer(
+function buildInquiryMailer(
     string $smtpHost,
     int $smtpPort,
     string $smtpUsername,
@@ -136,61 +136,61 @@ function buildMailer(
 
 try {
     $logoUrl = 'assets/img/logo/home-01-header-logo.png';
-    $safeName = esc($fullName);
-    $safePhone = esc($contactNumber);
-    $safeEmail = esc($email);
-    $safeProduct = esc($productName);
-    $safeTypeLiter = esc($typeLiter);
-    $safeMessageHtml = nl2br(esc($message));
-    $safeFromName = esc($smtpFromName);
+    $safeName = escInquiry($fullName);
+    $safePhone = escInquiry($contactNumber);
+    $safeEmail = escInquiry($email);
+    $safeProduct = escInquiry($productName);
+    $safeTypeLiter = escInquiry($typeLiter);
+    $safeMessage = nl2br(escInquiry($message));
+    $safeFromName = escInquiry($smtpFromName);
 
     $adminContent = '
-      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">A new quote request has been submitted from the website.</p>
+      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">A new product inquiry has been submitted from the website.</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border:1px solid #dbe4ee;border-radius:10px;overflow:hidden;">
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:180px;">Full Name</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeName . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:220px;">Full Name</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeName . '</td></tr>
         <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Contact Number</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safePhone . '</td></tr>
         <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Email</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeEmail . '</td></tr>
         <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Product</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeProduct . '</td></tr>
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Type / Liter</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeTypeLiter . '</td></tr>
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;vertical-align:top;border-bottom:1px solid #dbe4ee;">Message</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeMessageHtml . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Required Quantity / Type</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeTypeLiter . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;vertical-align:top;border-bottom:1px solid #dbe4ee;">Message</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeMessage . '</td></tr>
       </table>';
 
     $userContent = '
       <p style="margin:0 0 14px 0;font-size:14px;line-height:22px;">Hi ' . $safeName . ',</p>
-      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">Thank you for your quote request. We have received your details and our team will get back to you shortly.</p>
+      <p style="margin:0 0 16px 0;font-size:14px;line-height:22px;">Thank you for your product inquiry. We have received your request and our team will contact you shortly.</p>
       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border:1px solid #dbe4ee;border-radius:10px;overflow:hidden;">
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:180px;">Product</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeProduct . '</td></tr>
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Type / Liter</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeTypeLiter . '</td></tr>
-        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;vertical-align:top;">Message</td><td style="padding:12px;">' . $safeMessageHtml . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;width:220px;">Product</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeProduct . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;border-bottom:1px solid #dbe4ee;">Required Quantity / Type</td><td style="padding:12px;border-bottom:1px solid #dbe4ee;">' . $safeTypeLiter . '</td></tr>
+        <tr><td style="padding:12px;background:#f8fbff;font-weight:700;vertical-align:top;">Message</td><td style="padding:12px;">' . $safeMessage . '</td></tr>
       </table>
       <p style="margin:16px 0 0 0;font-size:14px;line-height:22px;">Regards,<br>' . $safeFromName . '</p>';
 
-    $adminMailer = buildMailer($smtpHost, $smtpPort, $smtpUsername, $smtpPassword, $smtpEncryption, $smtpFromEmail, $smtpFromName);
+    $adminMailer = buildInquiryMailer($smtpHost, $smtpPort, $smtpUsername, $smtpPassword, $smtpEncryption, $smtpFromEmail, $smtpFromName);
     $adminMailer->addAddress($adminEmail, 'Admin');
     $adminMailer->addReplyTo($email, $fullName);
-    $adminMailer->Subject = 'New Quote Request: ' . $productName;
-    $adminMailer->Body = renderEmailTemplate(
-        'New Quote Request',
-        'Website quote request details are listed below.',
+    $adminMailer->Subject = 'New Product Inquiry: ' . $productName;
+    $adminMailer->Body = renderInquiryEmailTemplate(
+        'New Product Inquiry',
+        'Website product inquiry details are listed below.',
         $adminContent,
-        'This is an automated message from your website quote form.',
+        'This is an automated message from your website product inquiry form.',
         $logoUrl
     );
     $adminMailer->AltBody =
-        "New quote request received.\n\n" .
+        "New product inquiry received.\n\n" .
         "Full Name: {$fullName}\n" .
         "Contact Number: {$contactNumber}\n" .
         "Email: {$email}\n" .
         "Product: {$productName}\n" .
-        "Type / Liter: {$typeLiter}\n" .
+        "Required Quantity / Type: {$typeLiter}\n" .
         "Message:\n{$message}";
     $adminMailer->send();
 
-    $userMailer = buildMailer($smtpHost, $smtpPort, $smtpUsername, $smtpPassword, $smtpEncryption, $smtpFromEmail, $smtpFromName);
+    $userMailer = buildInquiryMailer($smtpHost, $smtpPort, $smtpUsername, $smtpPassword, $smtpEncryption, $smtpFromEmail, $smtpFromName);
     $userMailer->addAddress($email, $fullName);
-    $userMailer->Subject = 'Thank you for your quote request';
-    $userMailer->Body = renderEmailTemplate(
-        'Thank You For Your Quote Request',
+    $userMailer->Subject = 'Thank you for your product inquiry';
+    $userMailer->Body = renderInquiryEmailTemplate(
+        'Thank You For Your Inquiry',
         'We have received your request successfully.',
         $userContent,
         'Need help urgently? Reply to this email and our team will assist you.',
@@ -198,17 +198,17 @@ try {
     );
     $userMailer->AltBody =
         "Hi {$fullName},\n\n" .
-        "Thank you for your quote request. We have received your details and our team will get back to you soon.\n\n" .
+        "Thank you for your product inquiry. We have received your request and our team will get back to you soon.\n\n" .
         "Your submitted details:\n" .
         "Product: {$productName}\n" .
-        "Type / Liter: {$typeLiter}\n" .
+        "Required Quantity / Type: {$typeLiter}\n" .
         "Message: {$message}\n\n" .
         "Regards,\n{$smtpFromName}";
     $userMailer->send();
 
-    header('Location: ' . $redirectTo . '?status=success');
+    header('Location: ' . $redirectTo . '?status=success#inquiry-section');
     exit;
 } catch (Exception $e) {
-    header('Location: ' . $redirectTo . '?status=mail_error');
+    header('Location: ' . $redirectTo . '?status=mail_error#inquiry-section');
     exit;
 }

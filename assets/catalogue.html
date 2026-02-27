@@ -997,6 +997,72 @@
             color: var(--aqua);
         }
 
+        .oceanic-range-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .oceanic-category-card {
+            background: linear-gradient(165deg, #f8fbff 0%, #eef6ff 100%);
+            border: 1px solid #d6e5f5;
+            border-radius: 16px;
+            padding: 14px;
+            box-shadow: 0 6px 14px rgba(12, 43, 79, 0.08);
+        }
+
+        .oceanic-category-card h3 {
+            font-size: 18px;
+            color: var(--ocean-primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d8e9fb;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .oceanic-product-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .oceanic-product-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            border: 1px solid #dce9f6;
+            border-radius: 12px;
+            padding: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .oceanic-product-row:hover {
+            transform: translateY(-2px);
+            border-color: #9ec7ef;
+            box-shadow: 0 8px 16px rgba(13, 98, 168, 0.15);
+        }
+
+        .oceanic-product-row img {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid #e0ecf8;
+            background: #fff;
+            padding: 5px;
+            flex-shrink: 0;
+        }
+
+        .oceanic-product-row span {
+            font-size: 11px;
+            line-height: 1.35;
+            font-weight: 600;
+            color: #143a61;
+        }
+
         /* Print Styles */
         @media print {
             body { background: white; }
@@ -1074,7 +1140,7 @@
             </div>
         </div>
         <div class="cover-footer">
-            <i class="fas fa-water"></i> INNOVATION IN COATING TECHNOLOGY • EST. 2024 <i class="fas fa-water"></i>
+            <i class="fas fa-water"></i> INNOVATION IN COATING TECHNOLOGY • EST. 2026 <i class="fas fa-water"></i>
         </div>
     </div>
 
@@ -1258,9 +1324,64 @@
                 </div>
             </div>
         </div>
+
     </div>
 
-    <!-- Page 4: Marine Coatings -->
+    <!-- Page 4: Oceanic Product Range -->
+    <div class="page content-page">
+        <!-- Paint Decorations -->
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-2"></div>
+        <div class="paint-drop paint-drop-2"></div>
+        <div class="paint-drop paint-drop-5"></div>
+        <div class="paint-stroke paint-stroke-1"></div>
+        <div class="paint-stroke paint-stroke-3"></div>
+
+        <div class="page-header">
+            <div class="page-header-icon">
+                <i class="fas fa-list-check"></i>
+            </div>
+            <div>
+                <h2>Oceanic Product Range</h2>
+                <p>Marine, Industrial &amp; Decorative Categories</p>
+            </div>
+        </div>
+
+        <div class="oceanic-range-layout fade-in">
+            <div class="oceanic-category-card">
+                <h3><i class="fas fa-ship"></i> Marine</h3>
+                <div class="oceanic-product-list">
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint.png" alt="Oceanic Premium Antifouling Paint"><span>Oceanic Premium Antifouling Paint</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint%20Fibre%20Coat%20Plus.png" alt="Oceanic Premium Antifouling Paint Fibre Coat Plus"><span>Oceanic Premium Antifouling Paint Fibre Coat Plus</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(1).png" alt="Oceanic Sea Shield Antifouling"><span>Oceanic Sea Shield Antifouling</span></div>
+                </div>
+            </div>
+
+            <div class="oceanic-category-card">
+                <h3><i class="fas fa-industry"></i> Industrial</h3>
+                <div class="oceanic-product-list">
+                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(2).png" alt="Thermochromic + Antimicrobial QD Enamel"><span>Thermochromic + Antimicrobial QD Enamel</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(2).png" alt="Self Polishing + Heat Reflective Epoxy Coatings"><span>Self Polishing + Heat Reflective Epoxy Coatings</span></div>
+                </div>
+            </div>
+
+            <div class="oceanic-category-card">
+                <h3><i class="fas fa-paint-roller"></i> Decorative</h3>
+                <div class="oceanic-product-list">
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Multipurpose-Primer.png" alt="Oceanic Multipurpose Primer"><span>Oceanic Multipurpose Primer</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Ultra-Protek.png" alt="Oceanic Ultra Protek"><span>Oceanic Ultra Protek</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Ultra-Plus.png" alt="Oceanic Ultra Plus"><span>Oceanic Ultra Plus</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Shine-Interior-Emulsion.png" alt="Shine Interior Emulsion"><span>Shine Interior Emulsion</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Exterior-Emulsion.png" alt="Exterior Emulsion"><span>Exterior Emulsion</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Acrylic-Distemper.png" alt="Oceanic Acrylic Distemper"><span>Oceanic Acrylic Distemper</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/oceanic-base-coat-primer.png" alt="Oceanic Base Coat Primer"><span>Oceanic Base Coat Primer</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/oceanic-texture.png" alt="Oceanic Texture"><span>Oceanic Texture</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Marine Coatings -->
     <div class="page content-page">
         <!-- Paint Decorations -->
         <div class="paint-splash paint-splash-1"></div>
@@ -1562,7 +1683,7 @@
             </div>
             
             <div class="contact-footer">
-                <p><i class="fas fa-water"></i> © 2024 V.K. Paints Industries. All Rights Reserved. <i class="fas fa-water"></i></p>
+                <p><i class="fas fa-water"></i> © 2026 V.K. Paints Industries. All Rights Reserved. <i class="fas fa-water"></i></p>
                 <p>Innovation in Coating Technology</p>
             </div>
         </div>

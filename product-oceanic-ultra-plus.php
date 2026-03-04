@@ -1,15 +1,26 @@
-﻿<?php
+<?php
 $product = [
     'name' => 'Oceanic Ultra Plus',
     'category' => 'Decorative Paints',
-    'image' => 'assets/img/products/products4-thumb(3).png',
-    'description' => 'Advanced decorative emulsion designed for rich appearance, high coverage and lasting surface appeal.',
+    'image' => 'assets/img/products/Oceanic-Ultra-Plus.png',
+    'description' => 'Premium decorative paint for smooth interior finish and rich long-lasting color.',
+    'details' => [
+        'Oceanic Ultra Plus is a premium decorative paint designed to deliver smooth finish and rich color for interior walls.',
+        'It enhances the appearance of living spaces while offering long-lasting durability.'
+    ],
     'features' => [
-        'Rich and elegant wall finish',
-        'Excellent hiding power',
-        'Smooth application behavior',
-        'Long-lasting decorative performance'
-    ]
+        'Smooth luxurious finish',
+        'High coverage',
+        'Washable surface',
+        'Long-lasting colors'
+    ],
+    'applications' => [
+        'Homes',
+        'Offices',
+        'Hotels',
+        'Interior walls'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

@@ -1,15 +1,24 @@
-﻿<?php
+<?php
 $product = [
     'name' => 'Oceanic Base Coat Primer',
     'category' => 'Decorative Paints',
-    'image' => 'assets/img/products/products4-thumb(3).png',
-    'description' => 'Foundation primer to enhance topcoat lock, improve substrate sealing and stabilize decorative coat performance.',
+    'image' => 'assets/img/products/oceanic-base-coat-primer.png',
+    'description' => 'Strong base layer primer for better adhesion and uniform topcoat performance.',
+    'details' => [
+        'Oceanic Base Coat Primer is specially formulated to create a strong base layer before final paint application.',
+        'It helps improve paint adhesion and ensures uniform finish.'
+    ],
     'features' => [
-        'Seals porous surfaces effectively',
-        'Boosts topcoat adhesion',
-        'Improves finish consistency',
-        'Supports longer coating life'
-    ]
+        'Strong surface bonding',
+        'Enhances topcoat performance',
+        'Improves paint durability'
+    ],
+    'applications' => [
+        'Interior walls',
+        'Exterior walls',
+        'New construction and repainting'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

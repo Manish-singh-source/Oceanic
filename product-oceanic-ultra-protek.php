@@ -1,15 +1,25 @@
-﻿<?php
+<?php
 $product = [
     'name' => 'Oceanic Ultra Protek',
     'category' => 'Decorative Paints',
-    'image' => 'assets/img/products/products4-thumb(3).png',
-    'description' => 'Premium decorative paint with robust protection and smooth finish performance for modern walls.',
+    'image' => 'assets/img/products/Oceanic-Ultra-Protek.png',
+    'description' => 'Durable exterior coating for long-term weather protection and color retention.',
+    'details' => [
+        'Oceanic Ultra Protek is a durable exterior coating designed to protect buildings from harsh weather conditions such as rain, sunlight, and pollution.',
+        'It provides excellent color retention and long-lasting protection.'
+    ],
     'features' => [
-        'High durability and washability',
-        'Smooth decorative finish',
-        'Good color retention',
-        'Low maintenance surface care'
-    ]
+        'Weather resistant',
+        'UV protection',
+        'Long-lasting finish',
+        'Crack resistance'
+    ],
+    'applications' => [
+        'Exterior walls',
+        'Residential buildings',
+        'Commercial structures'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

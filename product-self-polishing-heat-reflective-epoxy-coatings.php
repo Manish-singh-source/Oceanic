@@ -1,15 +1,29 @@
-﻿<?php
+<?php
 $product = [
-    'name' => 'Self Polishing + Heat Reflective Epoxy Coatings',
+    'name' => 'Self Polishing + Heat Reflective Epoxy Coating',
     'category' => 'Industrial Coatings',
     'image' => 'assets/img/products/products4-thumb(2).png',
-    'description' => 'Epoxy coating system with self-polishing behavior and heat reflective performance to support durability and thermal load reduction.',
+    'description' => 'High-performance epoxy coating with self-polishing and heat-reflective performance.',
+    'details' => [
+        'Oceanic Self Polishing Heat Reflective Epoxy Coating is a high-performance industrial coating that combines self-renewing surface properties with heat reflection technology.',
+        'The coating gradually polishes itself during exposure, maintaining a clean and efficient surface.',
+        'It reflects heat to reduce surface temperature and improve energy efficiency.'
+    ],
     'features' => [
-        'Heat reflectance for reduced surface heating',
-        'Self-polishing surface behavior',
-        'Excellent mechanical durability',
-        'Suitable for demanding industrial environments'
-    ]
+        'Heat reflective technology',
+        'Self-polishing surface',
+        'Excellent chemical resistance',
+        'Superior adhesion to metal and concrete',
+        'Long service life'
+    ],
+    'applications' => [
+        'Industrial plants',
+        'Marine infrastructure',
+        'Storage tanks',
+        'Pipelines',
+        'Power plants'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

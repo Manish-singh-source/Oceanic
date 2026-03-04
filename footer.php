@@ -31,7 +31,6 @@
                   <li><a href="index.php">Home</a></li>
                   <li><a href="about-us.php">About Us</a></li>
                   <li><a href="products.php">Products</a></li>
-                  <li><a href="blog.php">Blog</a></li>
                   <li><a href="contact.php">Contact Us</a></li>
                   <li><a href="request-quote.php">Request A Quote</a></li>
                </ul>
@@ -39,12 +38,12 @@
          </div>
          <div class="col-xl col-lg-4 col-md-6">
             <div class="footer-widget-hour">
-               <h4>Business Hours</h4>
+               <h4>Products</h4>
                <div class="space28"></div>
                <ul>
-                  <li><span><a class="f-date" href="javascript:void(0)">Mon–Fri:</a></span> <span><a href="javascript:void(0)">8:00 AM - 6:00 PM</a></span></li>
-                  <li><span><a class="f-date" href="javascript:void(0)">Sat:</a></span> <span><a href="javascript:void(0)">9:00 AM - 2:00 PM</a></span></li>
-                  <li><span><a class="f-date" href="javascript:void(0)">Sun:</a></span> <span><a href="javascript:void(0)">Closed</a></span></li>
+                  <li><span><a class="f-date" href="marine-paints.php">Marine Paints</a></li>
+                  <li><span><a class="f-date" href="industrial-coatings.php">Industrial Coatings</a></span></li>
+                  <li><span><a class="f-date" href="decorative-paints.php">Decorative Paints</a></span></li>
                </ul>
             </div>
          </div>
@@ -55,32 +54,47 @@
                <div class="row gx-2">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
                      <div class="footer-img">
-                        <img src="assets/img/footer/footer1-img-(1).png" alt="">
+                        <img src="assets/img/products/Oceanic Premium Antifouling Paint.png" alt="">
                      </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
                      <div class="footer-img">
-                        <img src="assets/img/footer/footer1-img-(2).png" alt="">
+                        <img src="assets/img/products/Oceanic-Multipurpose-Primer.png" alt="">
                      </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
                      <div class="footer-img">
-                        <img src="assets/img/footer/footer1-img-(3).png" alt="">
+                        <img src="assets/img/products/Oceanic-Ultra-Protek.png" alt="">
                      </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
                      <div class="footer-img">
-                        <img src="assets/img/footer/footer1-img-(4).png" alt="">
+                        <img src="assets/img/products/Oceanic-Multipurpose-Primer.png" alt="">
                      </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
                      <div class="footer-img">
-                        <img src="assets/img/footer/footer1-img-(5).png" alt="">
+                        <img src="assets/img/products/Oceanic-Ultra-Plus.png" alt="">
                      </div>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
                      <div class="footer-img">
-                        <img src="assets/img/footer/footer1-img-(6).png" alt="">
+                        <img src="assets/img/products/oceanic-texture.png" alt="">
+                     </div>
+                  </div>
+                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+                     <div class="footer-img">
+                        <img src="assets/img/products/Oceanic Premium Antifouling Paint.png" alt="">
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+                     <div class="footer-img">
+                        <img src="assets/img/products/Oceanic-Multipurpose-Primer.png" alt="">
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+                     <div class="footer-img">
+                        <img src="assets/img/products/Oceanic-Ultra-Protek.png" alt="">
                      </div>
                   </div>
                </div>

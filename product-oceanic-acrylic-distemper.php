@@ -1,15 +1,25 @@
-﻿<?php
+<?php
 $product = [
     'name' => 'Oceanic Acrylic Distemper',
     'category' => 'Decorative Paints',
-    'image' => 'assets/img/products/products4-thumb(3).png',
-    'description' => 'Economical acrylic distemper designed for cost-effective decorative coating with smooth appearance.',
+    'image' => 'assets/img/products/Oceanic-Acrylic-Distemper.png',
+    'description' => 'Economical decorative coating for smooth matte interior finishes.',
+    'details' => [
+        'Oceanic Acrylic Distemper is an economical decorative coating that offers good coverage and smooth finish for interior walls.',
+        'It is suitable for large residential and commercial projects where affordability and durability are important.'
+    ],
     'features' => [
-        'Budget-friendly decorative option',
-        'Easy brush or roller application',
-        'Uniform matte finish',
-        'Suitable for routine interior repainting'
-    ]
+        'Cost effective',
+        'Smooth matte finish',
+        'Good coverage',
+        'Easy application'
+    ],
+    'applications' => [
+        'Residential interiors',
+        'Commercial interiors',
+        'Large repainting projects'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

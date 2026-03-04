@@ -1,15 +1,28 @@
-﻿<?php
+<?php
 $product = [
     'name' => 'Thermochromic + Antimicrobial QD Enamel',
     'category' => 'Industrial Coatings',
     'image' => 'assets/img/products/products4-thumb(2).png',
-    'description' => 'Smart industrial enamel combining heat-responsive visual behavior with antimicrobial functionality for technical surface applications.',
+    'description' => 'Technology-enabled industrial enamel with thermo-indication and antimicrobial protection.',
+    'details' => [
+        'Oceanic Thermochromic + Antimicrobial Quick Dry Enamel is a technologically advanced coating designed for industrial surfaces that require both temperature-responsive properties and antimicrobial protection.',
+        'The coating changes color based on temperature variation (thermochromic effect), making it ideal for monitoring heat exposure.',
+        'Its antimicrobial formulation helps inhibit the growth of bacteria, fungi, and harmful microbes on coated surfaces.'
+    ],
     'features' => [
-        'Thermochromic response for temperature indication',
-        'Antimicrobial surface support',
-        'Quick-dry enamel system',
-        'Industrial-grade durability and cleanability'
-    ]
+        'Thermochromic temperature indication',
+        'Antimicrobial protection',
+        'Quick drying formulation',
+        'High durability and chemical resistance',
+        'Smooth glossy finish'
+    ],
+    'applications' => [
+        'Industrial machinery',
+        'Medical equipment',
+        'Food processing facilities',
+        'Public infrastructure'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

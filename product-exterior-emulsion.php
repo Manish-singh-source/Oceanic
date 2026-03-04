@@ -1,15 +1,25 @@
-﻿<?php
+<?php
 $product = [
-    'name' => 'Exterior Emulsion',
+    'name' => 'Oceanic Exterior Emulsion',
     'category' => 'Decorative Paints',
-    'image' => 'assets/img/products/products4-thumb(3).png',
-    'description' => 'Weather-resistant exterior emulsion for reliable color life and improved resistance against rain, humidity and UV exposure.',
+    'image' => 'assets/img/products/Exterior-Emulsion.png',
+    'description' => 'Exterior wall coating with superior weather protection and color stability.',
+    'details' => [
+        'Oceanic Exterior Emulsion provides superior protection for external walls against weather damage and environmental pollution.',
+        'It offers excellent adhesion and long-lasting color stability.'
+    ],
     'features' => [
-        'Strong weatherability',
-        'UV and rain resistance support',
-        'Exterior wall durability',
-        'Longer repaint cycle potential'
-    ]
+        'Weather resistant',
+        'Strong adhesion',
+        'Anti-peeling formula',
+        'Long color life'
+    ],
+    'applications' => [
+        'Exterior walls',
+        'Residential facades',
+        'Commercial exteriors'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

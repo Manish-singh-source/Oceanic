@@ -174,7 +174,7 @@
                         <span>Cost Efficient</span>
                     </div>
                     
-                    <img src="assets/img/choosse/aboutuss-inr-choose-thumb.png" class="ims" alt="">
+                    <img src="assets/img/about/about1.png" class="ims" alt="">
                 </div>
             </div>
             <div class="col-xl-7 col-lg-12 mvmt-20">
@@ -383,9 +383,9 @@
         <div class="row">
             <div class="vl-cta2-area-info">
                 <div class="vl-cta2-area-info-content">
-                    <h3>Let’s Create Something <br> Stunning Together</h3>
+                    <h3>Let's Create Something <br> Stunning Together</h3>
                     <div class="space16"></div>
-                    <p>Ready to bring your walls to life? Whether you're updating <br> a single room or transforming an entire space, our expert.</p>
+                    <p>Ready to upgrade your space with premium coating solutions? <br> From home interiors to marine and industrial projects,<br> Oceanic delivers trusted quality and expert support.</p>
                 </div>
                 <div class="vl-cta2-area-from-section">
                     <div class="vl-cta2-area-from-section-heading">

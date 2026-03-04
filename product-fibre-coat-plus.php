@@ -1,14 +1,41 @@
-﻿<?php
+<?php
 $product = [
-    'name' => 'Oceanic Premium Antifouling Paint Fibre Coat Plus',
+    'name' => 'Oceanic Premium Antifouling Paint - Fibre Coat Plus',
     'category' => 'Marine Paints',
-    'image' => 'assets/img/products/products4-thumb(1).png',
-    'description' => 'Reinforced antifouling system with fibre-enhanced structure for improved film integrity and better long-term marine protection.',
+    'image' => 'assets/img/products/Oceanic Premium Antifouling Paint Fibre Coat Plus.png',
+    'description' => 'Advanced antifouling coating specially developed for fiberglass and FRP boats.',
+    'details' => [
+        'Oceanic Premium Antifouling Fibre Coat Plus is an advanced antifouling coating specially developed for fiberglass and FRP (Fibre Reinforced Plastic) boats.',
+        'It offers superior adhesion and long-term protection against marine fouling and environmental degradation.',
+        'The product forms a strong protective barrier that prevents marine growth while maintaining hull integrity and durability.'
+    ],
     'features' => [
-        'Fibre reinforced coating matrix',
-        'Better crack resistance in dynamic service',
-        'Long-lasting underwater protection',
-        'Optimized coverage for maintenance coating cycles'
+        'Specially formulated for fiberglass boats',
+        'Excellent adhesion and durability',
+        'Strong antifouling protection',
+        'Enhances hull life and performance',
+        'Long service interval between recoating'
+    ],
+    'applications' => [
+        'Fibre boats',
+        'Speed boats',
+        'Leisure crafts',
+        'Small fishing vessels'
+    ],
+    'speciality' => [
+        'title' => 'Oceanic Strong Biocide Antifouling Technology',
+        'description' => [
+            'Oceanic Antifouling Coatings are formulated with high-efficiency biocidal technology designed to provide superior protection against aggressive marine fouling.',
+            'The strong biocide system actively prevents the attachment and growth of organisms such as barnacles, algae, slime, and marine bacteria on submerged surfaces.',
+            'This technology ensures long-term hull protection and helps improve fuel efficiency, vessel speed, and operational performance in harsh marine environments.'
+        ],
+        'advantages' => [
+            'Advanced strong biocide antifouling system',
+            'Superior protection against barnacles, algae, and slime',
+            'Reduces hull drag and improves fuel efficiency',
+            'Long service life in marine environments',
+            'Ideal for fishing vessels, cargo boats, and marine equipment'
+        ]
     ]
 ];
 

@@ -1,15 +1,25 @@
-﻿<?php
+<?php
 $product = [
-    'name' => 'Oceanic Texture',
+    'name' => 'Oceanic Texture Coating',
     'category' => 'Decorative Paints',
-    'image' => 'assets/img/products/products4-thumb(3).png',
-    'description' => 'Texture finish system for premium decorative effects and visual depth across feature walls and facades.',
+    'image' => 'assets/img/products/oceanic-texture.png',
+    'description' => 'Decorative exterior coating for premium textured finishes and weather protection.',
+    'details' => [
+        'Oceanic Texture Coating is a decorative exterior coating designed to create stylish textured wall finishes while providing strong protection against weather damage.',
+        'It enhances architectural beauty and provides a premium look to buildings.'
+    ],
     'features' => [
-        'Multiple textured design effects',
-        'Enhanced visual depth and character',
-        'Durable finish for feature areas',
-        'Compatible with selected tint systems'
-    ]
+        'Decorative textured finish',
+        'Weather resistant',
+        'Durable exterior protection',
+        'Crack bridging properties'
+    ],
+    'applications' => [
+        'Exterior feature walls',
+        'Residential buildings',
+        'Commercial facades'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

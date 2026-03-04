@@ -418,7 +418,7 @@
                         <img src="assets/img/choosse/chosse1-banner-1.png" alt="">
                     </div>
                     <div class="banner-shape2 text-end image-anime reveal">
-                        <img src="assets/img/choosse/chosse1-banner-2.png" alt="">
+                        <img src="assets/img/about/home1.png" alt="">
                     </div>
                 </div>
             </div>

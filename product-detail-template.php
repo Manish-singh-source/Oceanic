@@ -99,67 +99,26 @@
         font-size: 14px;
     }
 
-    .video-shell {
-        overflow: hidden;
-        border-radius: 18px;
-        box-shadow: 0 16px 36px rgba(5, 29, 56, 0.18);
-        line-height: 0;
-    }
-
-    .video-shell video {
-        width: 100%;
-        border: 0;
-    }
-
-    .interactive-wrap {
+    .description-list {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
+        gap: 10px;
     }
 
-    .interactive-card {
-        cursor: pointer;
-        border-radius: 14px;
-        border: 1px solid #d5e8f8;
-        background: #f7fcff;
-        padding: 16px;
-        transition: all .25s ease;
-    }
-
-    .interactive-card h4 {
-        color: #063159;
-        font-size: 18px;
-        margin-bottom: 6px;
-    }
-
-    .interactive-card p {
+    .description-list p {
         margin: 0;
         color: #2a5b82;
-        font-size: 14px;
     }
 
-    .interactive-card.active,
-    .interactive-card:hover {
-        transform: translateY(-4px);
-        border-color: #0d78b5;
-        box-shadow: 0 14px 30px rgba(13, 120, 181, 0.2);
-        background: linear-gradient(170deg, #0b4e7a, #0d89b3);
+    .application-list,
+    .advantage-list {
+        margin: 0;
+        padding-left: 20px;
+        color: #2a5b82;
     }
 
-    .interactive-card.active h4,
-    .interactive-card.active p,
-    .interactive-card:hover h4,
-    .interactive-card:hover p {
-        color: #fff;
-    }
-
-    .interactive-result {
-        margin-top: 16px;
-        border: 1px dashed #9ac8e7;
-        border-radius: 14px;
-        padding: 16px;
-        color: var(--text-deep);
-        background: #f2faff;
+    .application-list li + li,
+    .advantage-list li + li {
+        margin-top: 8px;
     }
 
     .spec-table {
@@ -224,13 +183,6 @@
             font-size: 38px;
         }
 
-        .interactive-wrap {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .video-shell video {
-            height: 320px;
-        }
     }
 
     @media (max-width: 767px) {
@@ -242,13 +194,8 @@
             padding: 22px;
         }
 
-        .feature-grid,
-        .interactive-wrap {
+        .feature-grid {
             grid-template-columns: 1fr;
-        }
-
-        .video-shell video {
-            height: 220px;
         }
     }
 </style>
@@ -277,11 +224,11 @@
     <section class="ocean-section">
         <div class="container">
             <div class="content-card">
-                <h3>Why Captains Prefer This Coating</h3>
+                <h3>Detailed Description</h3>
                 <div class="space16"></div>
-                <div class="feature-grid">
-                    <?php foreach ($product['features'] as $feature): ?>
-                        <div class="feature-pill"><i class="fa-solid fa-water"></i> <?php echo htmlspecialchars($feature); ?></div>
+                <div class="description-list">
+                    <?php foreach ($product['details'] as $detail): ?>
+                        <p><?php echo htmlspecialchars($detail); ?></p>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -291,13 +238,12 @@
     <section class="ocean-section">
         <div class="container">
             <div class="content-card">
-                <h3>Live Performance Film</h3>
-                <p class="mt-2">Muted autoplay demo runs continuously for a marine-use visual feel.</p>
+                <h3>Key Features</h3>
                 <div class="space16"></div>
-                <div class="video-shell">
-                    <video autoplay muted loop playsinline controlsList="nodownload" preload="auto">
-                        <source src="assets/Marine_Antifouling_Paint.mp4" type="video/mp4">Your browser does not support the video tag.
-                    </video>
+                <div class="feature-grid">
+                    <?php foreach ($product['features'] as $feature): ?>
+                        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> <?php echo htmlspecialchars($feature); ?></div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -306,34 +252,17 @@
     <section class="ocean-section">
         <div class="container">
             <div class="content-card">
-                <h3>Performance Explorer</h3>
-                <p class="mt-2">Cards par click karke benefits dekhiye.</p>
-                <div class="space16"></div>
-                <div class="interactive-wrap" id="interactiveCards">
-                    <div class="interactive-card active" data-title="Bio-Fouling Resistance" data-detail="Specialized chemistry hull surface par algae, slime aur barnacle adhesion ko minimize karti hai.">
-                        <h4>Bio-Shield</h4>
-                        <p>Low fouling adhesion</p>
-                    </div>
-                    <div class="interactive-card" data-title="Fuel Efficiency" data-detail="Cleaner hull drag ko reduce karta hai, jisse vessel ki movement zyada efficient hoti hai.">
-                        <h4>Drag Control</h4>
-                        <p>Smoother sailing</p>
-                    </div>
-                    <div class="interactive-card" data-title="Coastal Durability" data-detail="Salt spray aur harsh marine weather ke against coating integrity improve hoti hai.">
-                        <h4>Salt Defense</h4>
-                        <p>Harsh sea-ready</p>
-                    </div>
-                    <div class="interactive-card" data-title="Maintenance Window" data-detail="Longer cleaning intervals maintenance planning ko simple aur cost-conscious banate hain.">
-                        <h4>Long Interval</h4>
-                        <p>Reduced dry-dock load</p>
-                    </div>
-                </div>
-                <div class="interactive-result" id="interactiveResult">
-                    <strong>Bio-Fouling Resistance:</strong> Specialized chemistry hull surface par algae, slime aur barnacle adhesion ko minimize karti hai.
-                </div>
+                <h3>Applications</h3>
+                <div class="space12"></div>
+                <ul class="application-list">
+                    <?php foreach ($product['applications'] as $application): ?>
+                        <li><?php echo htmlspecialchars($application); ?></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         </div>
     </section>
-
+<!-- 
     <section class="ocean-section">
         <div class="container">
             <div class="row gy-4">
@@ -369,7 +298,29 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <?php if (!empty($product['speciality'])): ?>
+        <section class="ocean-section">
+            <div class="container">
+                <div class="content-card">
+                    <h3><?php echo htmlspecialchars($product['speciality']['title']); ?></h3>
+                    <div class="space12"></div>
+                    <?php foreach ($product['speciality']['description'] as $specialityText): ?>
+                        <p><?php echo htmlspecialchars($specialityText); ?></p>
+                    <?php endforeach; ?>
+                    <div class="space12"></div>
+                    <h4>Key Advantages</h4>
+                    <div class="space8"></div>
+                    <ul class="advantage-list">
+                        <?php foreach ($product['speciality']['advantages'] as $advantage): ?>
+                            <li><?php echo htmlspecialchars($advantage); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
 
     <section class="ocean-section" id="inquiry-section" style="padding-bottom:90px;">
         <div class="container">
@@ -413,22 +364,5 @@
         </div>
     </section>
 </div>
-
-<script>
-    (function() {
-        var cards = document.querySelectorAll('#interactiveCards .interactive-card');
-        var result = document.getElementById('interactiveResult');
-
-        cards.forEach(function(card) {
-            card.addEventListener('click', function() {
-                cards.forEach(function(c) {
-                    c.classList.remove('active');
-                });
-                card.classList.add('active');
-                result.innerHTML = '<strong>' + card.dataset.title + ':</strong> ' + card.dataset.detail;
-            });
-        });
-    })();
-</script>
 
 <?php include 'footer.php'; ?>

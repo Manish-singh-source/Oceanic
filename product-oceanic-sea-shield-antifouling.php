@@ -1,14 +1,40 @@
-﻿<?php
+<?php
 $product = [
     'name' => 'Oceanic Sea Shield Antifouling',
     'category' => 'Marine Paints',
     'image' => 'assets/img/products/products4-thumb(1).png',
-    'description' => 'Marine antifouling protection designed for harsh salinity and bio-fouling conditions with reliable coating endurance.',
+    'description' => 'Durable marine coating engineered for reliable antifouling protection in harsh conditions.',
+    'details' => [
+        'Oceanic Sea Shield Antifouling is a durable marine coating engineered for reliable protection in harsh marine conditions.',
+        'It provides an effective defense against algae, barnacles, and other marine fouling organisms.',
+        'Its balanced formulation ensures strong adhesion and steady release of antifouling agents, helping maintain smooth hull surfaces and improving vessel efficiency.'
+    ],
     'features' => [
-        'Marine-grade anti-fouling performance',
-        'Improved hull cleanliness retention',
-        'Good flow and finish during application',
-        'Suitable for commercial and utility vessels'
+        'Reliable antifouling protection',
+        'Smooth hull finish',
+        'Resistant to saltwater corrosion',
+        'Long-lasting performance',
+        'Cost-effective solution for marine vessels'
+    ],
+    'applications' => [
+        'Fishing vessels',
+        'Small cargo boats',
+        'Coastal marine equipment'
+    ],
+    'speciality' => [
+        'title' => 'Oceanic Strong Biocide Antifouling Technology',
+        'description' => [
+            'Oceanic Antifouling Coatings are formulated with high-efficiency biocidal technology designed to provide superior protection against aggressive marine fouling.',
+            'The strong biocide system actively prevents the attachment and growth of organisms such as barnacles, algae, slime, and marine bacteria on submerged surfaces.',
+            'This technology ensures long-term hull protection and helps improve fuel efficiency, vessel speed, and operational performance in harsh marine environments.'
+        ],
+        'advantages' => [
+            'Advanced strong biocide antifouling system',
+            'Superior protection against barnacles, algae, and slime',
+            'Reduces hull drag and improves fuel efficiency',
+            'Long service life in marine environments',
+            'Ideal for fishing vessels, cargo boats, and marine equipment'
+        ]
     ]
 ];
 

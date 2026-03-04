@@ -1,15 +1,25 @@
-﻿<?php
+<?php
 $product = [
     'name' => 'Oceanic Multipurpose Primer',
     'category' => 'Decorative Paints',
-    'image' => 'assets/img/products/products4-thumb(3).png',
-    'description' => 'General-purpose primer that improves substrate hold, topcoat uniformity and long-term decorative coating life.',
+    'image' => 'assets/img/products/Oceanic-Multipurpose-Primer.png',
+    'description' => 'High-quality base coating designed to prepare surfaces before topcoat application.',
+    'details' => [
+        'Oceanic Multipurpose Primer is a high-quality base coating designed to prepare surfaces for topcoat application.',
+        'It enhances adhesion and ensures better coverage and durability of finishing paints.'
+    ],
     'features' => [
-        'Strong base layer adhesion',
-        'Improved topcoat coverage',
-        'Supports reduced paint consumption',
-        'Suitable for interior and selected exterior usage'
-    ]
+        'Excellent surface sealing',
+        'Strong adhesion',
+        'Improves paint durability',
+        'Suitable for multiple surfaces'
+    ],
+    'applications' => [
+        'Walls',
+        'Wood',
+        'Metal surfaces'
+    ],
+    'speciality' => []
 ];
 
 $defaultSpecs = [

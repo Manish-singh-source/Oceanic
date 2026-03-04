@@ -53,7 +53,7 @@
                                                 <li><a href="marine-paints.php">Marine Paints</a></li>
                                                 <li><a href="industrial-coatings.php">Industrial Coatings</a></li>
                                                 <li><a href="decorative-paints.php">Decorative Paints</a></li>
-                                                <li><a href="products.php">All Products</a></li>
+                                                <!-- <li><a href="products.php">All Products</a></li> -->
 
                                             </ul>
                                         </li>

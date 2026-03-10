@@ -26,10 +26,10 @@ if ($firstName === '' || $phone === '' || $subject === '' || $message === '' || 
 $smtpMailer = getenv('MAIL_MAILER') ?: 'smtp';
 $smtpHost = getenv('MAIL_HOST') ?: 'smtp.gmail.com';
 $smtpPort = (int) (getenv('MAIL_PORT') ?: 587);
-$smtpUsername = getenv('MAIL_USERNAME') ?: 'support@technofra.com';
-$smtpPassword = getenv('MAIL_PASSWORD') ?: 'kcdivqkodwgvyaku';
+$smtpUsername = getenv('MAIL_USERNAME') ?: 'vkpaintsindustries@gmail.com';
+$smtpPassword = getenv('MAIL_PASSWORD') ?: 'byzjsetrsddrktzh';
 $smtpEncryption = getenv('MAIL_ENCRYPTION') ?: PHPMailer::ENCRYPTION_STARTTLS;
-$smtpFromEmail = getenv('MAIL_FROM_ADDRESS') ?: 'support@technofra.com';
+$smtpFromEmail = getenv('MAIL_FROM_ADDRESS') ?: 'vkpaintsindustries@gmail.com';
 $smtpFromName = getenv('MAIL_FROM_NAME') ?: (getenv('APP_NAME') ?: 'Oceanic Website');
 $adminEmail = getenv('CONTACT_ADMIN_EMAIL') ?: $smtpUsername;
 
@@ -115,7 +115,7 @@ function buildMailer(
 }
 
 try {
-    $logoUrl = 'assets/img/logo/home-01-header-logo.png';
+    $logoUrl = 'https://technofra.com/oceanic/assets/img/logo/oceanic.png';
     $safeName = esc($firstName);
     $safePhone = esc($phone);
     $safeEmail = esc($email);

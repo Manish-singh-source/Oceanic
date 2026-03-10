@@ -101,27 +101,18 @@
             </div>
          </div>
          <div class="row footer1_bottom_fixer">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-               <div class="footer-subscribe">
-                  <h3>Subscribe Our Newsletter</h3>
-                  <div class="space24"></div>
-                  <form action="#">
-                     <input type="email" placeholder="Email Address">
-                     <button class="sub_arrow" type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-                  </form>
-               </div>
-            </div>
-            <div class="col-xl-8 col-lg-8">
+            
+            <div class="col-xl-12 col-lg-12">
                <div class="footer-mobile-area">
                   <div class="footer-mobile-area-info">
                      <h4>Email:</h4>
                      <div class="space10"></div>
-                     <a href="#">info@oceanic.com</a>
+                   <a href="mailto:vkpaints78@gmail.com">vkpaints78@gmail.com</a>
                   </div>
                   <div class="footer-mobile-area-info">
                      <h4>Location:</h4>
                      <div class="space10"></div>
-                     <a href="#">Ghanshyam enclve 501 Kandivali West</a>
+                     <a href="#">J-11 Gurudev Industrial Compound Sonale - 421302</a>
                   </div>
                   <div class="footer-mobile-area-info">
                      <h4>Phone:</h4>

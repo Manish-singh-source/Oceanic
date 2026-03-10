@@ -600,11 +600,7 @@
                                                 </ul>
                                             </div>
                                             <div class="space16"></div>
-                                            <p class="p-text">“I couldn’t happier with the way my feature wall turned
-                                                out. The <br> team was so professional, clean, the wallpaper looks
-                                                absolutely <br> perfect. Highly recommend. Seamless install, perfectly
-                                                lined up <br> patterns, and no mess left behind. These guys are true
-                                                pros.”</p>
+                                            <p class="p-text">Oceanic antifouling paint reduced hull fouling significantly <br> and helped us plan maintenance cycles more efficiently.</p>
                                             <div class="space40"></div>
                                             <div class="testimonial1-bottom">
                                                 <div class="testimonial1-bio">
@@ -613,9 +609,9 @@
                                                             alt="">
                                                     </div>
                                                     <div class="testimonial1-bio-text">
-                                                        <h2>Marcus James K</h2>
+                                                        <h2>Rakesh Nair</h2>
                                                         <div class="space12"></div>
-                                                        <p>Interior Designer</p>
+                                                        <p>Fleet Operations Manager</p>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial1-bottom-logo">
@@ -658,11 +654,7 @@
                                                 </ul>
                                             </div>
                                             <div class="space16"></div>
-                                            <p class="p-text">“I couldn’t happier with the way my feature wall turned
-                                                out. The <br> team was so professional, clean, the wallpaper looks
-                                                absolutely <br> perfect. Highly recommend. Seamless install, perfectly
-                                                lined up <br> patterns, and no mess left behind. These guys are true
-                                                pros.”</p>
+                                            <p class="p-text">The industrial epoxy coating delivered a durable floor finish <br> and remained stable even under chemical exposure.</p>
                                             <div class="space40"></div>
                                             <div class="testimonial1-bottom">
                                                 <div class="testimonial1-bio">
@@ -671,9 +663,9 @@
                                                             alt="">
                                                     </div>
                                                     <div class="testimonial1-bio-text">
-                                                        <h2>Marcus James K</h2>
+                                                        <h2>Priya Sharma</h2>
                                                         <div class="space12"></div>
-                                                        <p>Interior Designer</p>
+                                                        <p>Plant Maintenance Head</p>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial1-bottom-logo">
@@ -716,11 +708,7 @@
                                                 </ul>
                                             </div>
                                             <div class="space16"></div>
-                                            <p class="p-text">“I couldn’t happier with the way my feature wall turned
-                                                out. The <br> team was so professional, clean, the wallpaper looks
-                                                absolutely <br> perfect. Highly recommend. Seamless install, perfectly
-                                                lined up <br> patterns, and no mess left behind. These guys are true
-                                                pros.”</p>
+                                            <p class="p-text">The decorative range offered excellent coverage and finish <br> with a clean, premium, and consistent handover result.</p>
                                             <div class="space40"></div>
                                             <div class="testimonial1-bottom">
                                                 <div class="testimonial1-bio">
@@ -729,9 +717,9 @@
                                                             alt="">
                                                     </div>
                                                     <div class="testimonial1-bio-text">
-                                                        <h2>Marcus James K</h2>
+                                                        <h2>Ankit Patel</h2>
                                                         <div class="space12"></div>
-                                                        <p>Interior Designer</p>
+                                                        <p>Civil Contractor</p>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial1-bottom-logo">

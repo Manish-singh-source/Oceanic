@@ -35,9 +35,8 @@
                         <h3>Office Number</h3>
                         <div class="space20"></div>
                         <ul>
-                            <li class="number_tags"><a href="tel:2143908650">(214) 390-8650</a></li>
-                            <li class="space12"></li>
-                            <li class="number_tags"><a href="tel:6023099604">(602) 309-9604</a></li>
+                            <li class="number_tags"><a href="tel:+917900104615">+91 79001 04615</a></li>
+                           
                         </ul>
                     </div>
                 </div> 
@@ -52,9 +51,8 @@
                         <h3>Our Location</h3>
                         <div class="space20"></div>
                         <ul>
-                            <li class="number_tags"><a href="tel:2143908650">2323 Dancing Dove Lane, Long</a></li>
-                            <li class="space12"></li>
-                            <li class="number_tags"><a href="tel:6023099604">Island City, NY 11101</a></li>
+                            <li class="number_tags"><a>J-11 Gurudev Industrial Compound Sonale - 421302</a></li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -69,9 +67,7 @@
                         <h3>Our Email</h3>
                         <div class="space20"></div>
                         <ul>
-                            <li class="number_tags"><a href="tel:2143908650">b.b.lawlor@outlook.com</a></li>
-                            <li class="space12"></li>
-                            <li class="number_tags"><a href="tel:6023099604">f.j.swann@aol.com</a></li>
+                            <li class="number_tags"><a href="mailto:vkpaints78@gmail.com">vkpaints78@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>

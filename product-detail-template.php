@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+﻿<?php include 'header.php'; ?>
 <?php include 'navbar.php'; ?>
 
 <style>
@@ -174,6 +174,18 @@
         min-height: 140px;
     }
 
+    .product-video-frame {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #d6e6f4;
+        background: #000;
+    }
+
+    .product-video-frame video {
+        width: 100%;
+        display: block;
+    }
+
     @media (max-width: 991px) {
         .ocean-hero {
             padding: 150px 0 80px;
@@ -199,6 +211,16 @@
         }
     }
 </style>
+
+<?php
+$marineVideoProducts = [
+    'Oceanic Premium Antifouling Paint',
+    'Oceanic Premium Antifouling Paint - Fibre Coat Plus',
+    'Oceanic Sea Shield Antifouling'
+];
+
+$showMarineVideo = in_array($product['name'], $marineVideoProducts, true);
+?>
 
 <div class="ocean-page">
     <section class="ocean-hero">
@@ -234,6 +256,23 @@
             </div>
         </div>
     </section>
+
+    <?php if ($showMarineVideo): ?>
+        <section class="ocean-section">
+            <div class="container">
+                <div class="content-card">
+                    <h3>Product Video</h3>
+                    <div class="space16"></div>
+                    <div class="product-video-frame">
+                        <video autoplay muted loop playsinline controls preload="metadata">
+                            <source src="assets/Marine_Antifouling_Paint.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
 
     <section class="ocean-section">
         <div class="container">
@@ -340,7 +379,7 @@
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
-                <form class="inquiry-form" action="send-product-inquiry.php" method="post">
+                <form id="productInquiryForm" class="inquiry-form" action="send-product-inquiry.php" method="post">
                     <input type="hidden" name="redirect_to" value="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] ?? ''); ?>">
                     <div class="row gy-3">
                         <div class="col-md-6"><input type="text" name="full_name" placeholder="Full Name*" required></div>
@@ -355,7 +394,7 @@
                         <div class="col-12"><textarea name="message" placeholder="Write your requirement..." required></textarea></div>
                         <div class="col-12">
                             <div class="btn_area3">
-                                <button type="submit" class="vl-btn3">Send Inquiry</button>
+                                <button id="productInquirySubmitBtn" type="submit" class="vl-btn3">Send Inquiry</button>
                             </div>
                         </div>
                     </div>
@@ -365,4 +404,27 @@
     </section>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('productInquiryForm');
+    var submitBtn = document.getElementById('productInquirySubmitBtn');
+
+    if (!form || !submitBtn) {
+        return;
+    }
+
+    form.addEventListener('submit', function () {
+        if (submitBtn.disabled) {
+            return false;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Loading...';
+        submitBtn.style.opacity = '0.7';
+        submitBtn.style.cursor = 'not-allowed';
+    });
+});
+</script>
 <?php include 'footer.php'; ?>
+
+

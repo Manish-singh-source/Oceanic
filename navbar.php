@@ -61,7 +61,7 @@
                                                 target="_blank">Catalogue<span> <i
                                                         class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
                                             <ul class="sub-menu">
-                                                <li><a href="assets/V-K-Paints-Industries-Product-Catalogue.pdf"
+                                                <li><a href="assets/vk-paints-2026.pdf"
                                                         target="_blank">Product Catalogue</a></li>
                                                 <li><a href="color-catalogue.php">Color Catalogue</a></li>
                                             </ul>

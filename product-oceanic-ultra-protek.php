@@ -1,25 +1,39 @@
 <?php
 $product = [
-    'name' => 'Oceanic Ultra Protek',
+    'name' => 'Oceanic Ultra Protek Ultima',
     'category' => 'Decorative Paints',
     'image' => 'assets/img/products/Oceanic-Ultra-Protek.png',
-    'description' => 'Durable exterior coating for long-term weather protection and color retention.',
+    'description' => 'Durable exterior coating for long-term weather protection, color retention and 10 years warranty support.',
     'details' => [
-        'Oceanic Ultra Protek is a durable exterior coating designed to protect buildings from harsh weather conditions such as rain, sunlight, and pollution.',
-        'It provides excellent color retention and long-lasting protection.'
+        'Oceanic Ultra Protek Ultima is a durable exterior coating designed to protect buildings from harsh weather conditions such as rain, sunlight, and pollution.',
+        'It provides excellent color retention and long-lasting protection backed by a 10 years warranty.',
+        'Recommended for exterior walls that require dependable weather resistance and long service life.'
     ],
     'features' => [
         'Weather resistant',
         'UV protection',
         'Long-lasting finish',
-        'Crack resistance'
+        'Crack resistance',
+        '10 years warranty'
     ],
     'applications' => [
         'Exterior walls',
         'Residential buildings',
         'Commercial structures'
     ],
-    'speciality' => []
+    'speciality' => [
+        'title' => 'Warranty Advantage',
+        'description' => [
+            'Ultra Protek Ultima is developed for exterior protection where long-term finish retention and weather durability are key requirements.',
+            'The product comes with 10 years warranty support when applied using the recommended primer and application process.'
+        ],
+        'advantages' => [
+            'Long-term exterior protection',
+            'Improved weather resistance',
+            'Extended color retention',
+            'Warranty-backed offering'
+        ]
+    ]
 ];
 
 $defaultSpecs = [
@@ -39,3 +53,5 @@ $applicationSteps = [
 
 include 'product-detail-template.php';
 ?>
+
+

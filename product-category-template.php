@@ -48,6 +48,14 @@
     margin: 0;
 }
 
+.product-card-body p {
+    margin: 10px 0 0;
+    color: #4d6883;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
 .learn-more-btn {
     display: inline-flex;
     align-items: center;
@@ -112,6 +120,9 @@
                         </div>
                         <div class="product-card-body">
                             <h3><?php echo htmlspecialchars($item['name']); ?></h3>
+                            <?php if (!empty($item['description'])): ?>
+                                <p><?php echo htmlspecialchars($item['description']); ?></p>
+                            <?php endif; ?>
                             <div class="space18"></div>
                             <a href="<?php echo htmlspecialchars($item['link']); ?>" class="learn-more-btn">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -123,3 +134,4 @@
 </div>
 
 <?php include 'footer.php'; ?>
+

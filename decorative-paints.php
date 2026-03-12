@@ -7,14 +7,16 @@ $products = [
         'link' => 'product-oceanic-multipurpose-primer.php'
     ],
     [
-        'name' => 'Oceanic Ultra Protek',
+        'name' => 'Oceanic Ultra Protek Ultima',
         'image' => 'assets/img/products/Oceanic-Ultra-Protek.png',
-        'link' => 'product-oceanic-ultra-protek.php'
+        'link' => 'product-oceanic-ultra-protek.php',
+        'description' => '10 Years Warranty'
     ],
     [
-        'name' => 'Oceanic Ultra Plus',
+        'name' => 'Oceanic Ultra Plus Apex',
         'image' => 'assets/img/products/Oceanic-Ultra-Plus.png',
-        'link' => 'product-oceanic-ultra-plus.php'
+        'link' => 'product-oceanic-ultra-plus.php',
+        'description' => '5 Years Warranty'
     ],
     [
         'name' => 'Shine Interior Emulsion',
@@ -45,3 +47,5 @@ $products = [
 
 include 'product-category-template.php';
 ?>
+
+

@@ -1000,7 +1000,7 @@
         .oceanic-range-layout {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
+            gap: 14px;
             margin-top: 8px;
         }
 
@@ -1008,14 +1008,14 @@
             background: linear-gradient(165deg, #f8fbff 0%, #eef6ff 100%);
             border: 1px solid #d6e5f5;
             border-radius: 16px;
-            padding: 14px;
+            padding: 12px;
             box-shadow: 0 6px 14px rgba(12, 43, 79, 0.08);
         }
 
         .oceanic-category-card h3 {
-            font-size: 18px;
+            font-size: 17px;
             color: var(--ocean-primary);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             padding-bottom: 8px;
             border-bottom: 2px solid #d8e9fb;
             display: flex;
@@ -1025,17 +1025,17 @@
 
         .oceanic-product-list {
             display: grid;
-            gap: 10px;
+            gap: 8px;
         }
 
         .oceanic-product-row {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            align-items: flex-start;
+            gap: 9px;
             background: #ffffff;
             border: 1px solid #dce9f6;
             border-radius: 12px;
-            padding: 8px;
+            padding: 7px;
             transition: all 0.25s ease;
         }
 
@@ -1046,21 +1046,217 @@
         }
 
         .oceanic-product-row img {
-            width: 72px;
-            height: 72px;
+            width: 56px;
+            height: 56px;
             object-fit: contain;
             border-radius: 10px;
             border: 1px solid #e0ecf8;
             background: #fff;
-            padding: 5px;
+            padding: 4px;
             flex-shrink: 0;
         }
 
-        .oceanic-product-row span {
+        .oceanic-product-copy {
+            min-width: 0;
+        }
+
+        .oceanic-product-copy span {
+            display: block;
             font-size: 11px;
-            line-height: 1.35;
+            line-height: 1.3;
             font-weight: 600;
             color: #143a61;
+        }
+
+        .oceanic-product-copy p {
+            margin-top: 3px;
+            font-size: 8.8px;
+            line-height: 1.4;
+            color: #4b6784;
+        }
+
+        .catalogue-detail-intro {
+            background: linear-gradient(135deg, rgba(10, 22, 40, 0.96), rgba(30, 58, 95, 0.92));
+            color: #fff;
+            border-radius: 18px;
+            padding: 18px 20px;
+            box-shadow: 0 12px 30px rgba(10, 22, 40, 0.18);
+            margin-bottom: 16px;
+        }
+
+        .catalogue-detail-intro h3 {
+            font-size: 24px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .catalogue-detail-intro p {
+            font-size: 13px;
+            opacity: 0.92;
+        }
+
+        .catalogue-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .catalogue-product-card {
+            background: #fff;
+            border: 1px solid #dce9f6;
+            border-radius: 18px;
+            padding: 16px;
+            box-shadow: 0 8px 24px rgba(15, 45, 78, 0.08);
+        }
+
+        .catalogue-product-head {
+            display: grid;
+            grid-template-columns: 96px minmax(0, 1fr);
+            gap: 14px;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+
+        .catalogue-product-head img {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
+            border-radius: 14px;
+            border: 1px solid #deebf8;
+            background: linear-gradient(180deg, #ffffff 0%, #f1f7fd 100%);
+            padding: 7px;
+            box-shadow: 0 6px 16px rgba(18, 56, 93, 0.08);
+        }
+
+        .catalogue-product-head h4 {
+            font-size: 16px;
+            color: #12385d;
+            line-height: 1.3;
+            margin-bottom: 5px;
+        }
+
+        .catalogue-product-head p {
+            font-size: 10.8px;
+            line-height: 1.55;
+            color: #587089;
+        }
+
+        .catalogue-chip {
+            display: inline-block;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #0f5c98;
+            background: #eaf5ff;
+            border-radius: 999px;
+            padding: 4px 8px;
+            margin-bottom: 6px;
+        }
+
+        .catalogue-detail-list {
+            display: grid;
+            gap: 7px;
+        }
+
+        .catalogue-detail-item {
+            background: #f5f9fd;
+            border-left: 3px solid #2e5c8a;
+            border-radius: 10px;
+            padding: 8px 10px;
+        }
+
+        .catalogue-detail-item strong {
+            display: block;
+            color: #143a61;
+            font-size: 10px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .catalogue-detail-item span {
+            display: block;
+            color: #5a7088;
+            font-size: 10.5px;
+            line-height: 1.45;
+        }
+
+        .catalogue-page-footer {
+            margin-top: 14px;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 14px;
+        }
+
+        .catalogue-process-box,
+        .catalogue-uses-box {
+            background: linear-gradient(180deg, #f8fbff 0%, #eef5fc 100%);
+            border: 1px solid #dce8f4;
+            border-radius: 18px;
+            padding: 14px;
+        }
+
+        .catalogue-process-box h4,
+        .catalogue-uses-box h4 {
+            font-size: 16px;
+            color: #143a61;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .catalogue-process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .catalogue-process-step {
+            background: #fff;
+            border: 1px solid #deebf7;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .catalogue-process-step strong {
+            display: block;
+            font-size: 10px;
+            color: #0f5c98;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .catalogue-process-step span {
+            display: block;
+            font-size: 10px;
+            line-height: 1.45;
+            color: #59718a;
+        }
+
+        .catalogue-use-tags {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .catalogue-use-tag {
+            background: #fff;
+            border: 1px solid #deebf7;
+            border-radius: 12px;
+            padding: 9px 10px;
+            font-size: 10.5px;
+            color: #23496d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .catalogue-use-tag i {
+            color: #0f5c98;
         }
 
         /* Print Styles */
@@ -1351,39 +1547,38 @@
             <div class="oceanic-category-card">
                 <h3><i class="fas fa-ship"></i> Marine</h3>
                 <div class="oceanic-product-list">
-                    <div class="oceanic-product-row"><img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint.png" alt="Oceanic Premium Antifouling Paint"><span>Oceanic Premium Antifouling Paint</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint%20Fibre%20Coat%20Plus.png" alt="Oceanic Premium Antifouling Paint Fibre Coat Plus"><span>Oceanic Premium Antifouling Paint Fibre Coat Plus</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(1).png" alt="Oceanic Sea Shield Antifouling"><span>Oceanic Sea Shield Antifouling</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint.png" alt="Oceanic Premium Antifouling Paint"><div class="oceanic-product-copy"><span>Oceanic Premium Antifouling Paint</span><p>High-performance antifouling coating engineered to protect vessel hulls against marine growth, salt attack and prolonged water exposure.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint%20Fibre%20Coat%20Plus.png" alt="Oceanic Premium Antifouling Paint Fibre Coat Plus"><div class="oceanic-product-copy"><span>Oceanic Premium Antifouling Paint Fibre Coat Plus</span><p>Reinforced antifouling system with fibre-enhanced structure for improved film integrity and better long-term marine protection.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(1).png" alt="Oceanic Sea Shield Antifouling"><div class="oceanic-product-copy"><span>Oceanic Sea Shield Antifouling</span><p>Marine antifouling protection designed for harsh salinity and bio-fouling conditions with reliable coating endurance.</p></div></div>
                 </div>
             </div>
 
             <div class="oceanic-category-card">
                 <h3><i class="fas fa-industry"></i> Industrial</h3>
                 <div class="oceanic-product-list">
-                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(2).png" alt="Thermochromic + Antimicrobial QD Enamel"><span>Thermochromic + Antimicrobial QD Enamel</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(2).png" alt="Self Polishing + Heat Reflective Epoxy Coatings"><span>Self Polishing + Heat Reflective Epoxy Coatings</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(2).png" alt="Thermochromic + Antimicrobial QD Enamel"><div class="oceanic-product-copy"><span>Thermochromic + Antimicrobial QD Enamel</span><p>Smart industrial enamel combining heat-responsive visual behavior with antimicrobial functionality for technical surface applications.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/products4-thumb(2).png" alt="Self Polishing + Heat Reflective Epoxy Coatings"><div class="oceanic-product-copy"><span>Self Polishing + Heat Reflective Epoxy Coatings</span><p>Epoxy coating system with self-polishing behavior and heat reflective performance to support durability and thermal load reduction.</p></div></div>
                 </div>
             </div>
 
             <div class="oceanic-category-card">
                 <h3><i class="fas fa-paint-roller"></i> Decorative</h3>
                 <div class="oceanic-product-list">
-                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Multipurpose-Primer.png" alt="Oceanic Multipurpose Primer"><span>Oceanic Multipurpose Primer</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Ultra-Protek.png" alt="Oceanic Ultra Protek"><span>Oceanic Ultra Protek</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Ultra-Plus.png" alt="Oceanic Ultra Plus"><span>Oceanic Ultra Plus</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/Shine-Interior-Emulsion.png" alt="Shine Interior Emulsion"><span>Shine Interior Emulsion</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/Exterior-Emulsion.png" alt="Exterior Emulsion"><span>Exterior Emulsion</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Acrylic-Distemper.png" alt="Oceanic Acrylic Distemper"><span>Oceanic Acrylic Distemper</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/oceanic-base-coat-primer.png" alt="Oceanic Base Coat Primer"><span>Oceanic Base Coat Primer</span></div>
-                    <div class="oceanic-product-row"><img src="./img/products/oceanic-texture.png" alt="Oceanic Texture"><span>Oceanic Texture</span></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Multipurpose-Primer.png" alt="Oceanic Multipurpose Primer"><div class="oceanic-product-copy"><span>Oceanic Multipurpose Primer</span><p>General-purpose primer that improves substrate hold, topcoat uniformity and long-term decorative coating life.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Ultra-Protek.png" alt="Oceanic Ultra Protek Ultima"><div class="oceanic-product-copy"><span>Oceanic Ultra Protek Ultima</span><p>Premium decorative paint with robust protection, smooth finish performance and 10 years warranty support for modern walls.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Ultra-Plus.png" alt="Oceanic Ultra Plus Apex"><div class="oceanic-product-copy"><span>Oceanic Ultra Plus Apex</span><p>Advanced decorative emulsion designed for rich appearance, high coverage, lasting surface appeal and 5 years warranty support.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Shine-Interior-Emulsion.png" alt="Shine Interior Emulsion"><div class="oceanic-product-copy"><span>Shine Interior Emulsion</span><p>Interior-focused emulsion crafted for clean finish quality and aesthetic consistency in residential and commercial spaces.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Exterior-Emulsion.png" alt="Exterior Emulsion"><div class="oceanic-product-copy"><span>Exterior Emulsion</span><p>Weather-resistant exterior emulsion for reliable color life and improved resistance against rain, humidity and UV exposure.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/Oceanic-Acrylic-Distemper.png" alt="Oceanic Acrylic Distemper"><div class="oceanic-product-copy"><span>Oceanic Acrylic Distemper</span><p>Economical acrylic distemper designed for cost-effective decorative coating with smooth appearance.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/oceanic-base-coat-primer.png" alt="Oceanic Base Coat Primer"><div class="oceanic-product-copy"><span>Oceanic Base Coat Primer</span><p>Foundation primer to enhance topcoat lock, improve substrate sealing and stabilize decorative coat performance.</p></div></div>
+                    <div class="oceanic-product-row"><img src="./img/products/oceanic-texture.png" alt="Oceanic Texture"><div class="oceanic-product-copy"><span>Oceanic Texture</span><p>Texture finish system for premium decorative effects and visual depth across feature walls and facades.</p></div></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Page 5: Marine Coatings -->
+    <!-- Page 5: Marine Paints -->
     <div class="page content-page">
-        <!-- Paint Decorations -->
         <div class="paint-splash paint-splash-1"></div>
         <div class="paint-splash paint-splash-2"></div>
         <div class="paint-drop paint-drop-2"></div>
@@ -1392,188 +1587,184 @@
         <div class="paint-stroke paint-stroke-3"></div>
 
         <div class="page-header">
-            <div class="page-header-icon">
-                <i class="fas fa-ship"></i>
-            </div>
+            <div class="page-header-icon"><i class="fas fa-ship"></i></div>
             <div>
-                <h2>Marine Coatings</h2>
-                <p>Advanced Protection for Vessels &amp; Offshore Structures</p>
+                <h2>Marine Paints</h2>
+                <p>Oceanic marine protection systems with product description and application guidance</p>
             </div>
         </div>
-        
-        <div class="product-category">
-            <div class="category-header">
-                <div class="category-icon">
-                    <i class="fas fa-anchor"></i>
+
+        <div class="catalogue-detail-intro fade-in">
+            <h3><i class="fas fa-anchor"></i> High-Performance Antifouling Range</h3>
+            <p>Designed for hull protection, marine immersion service, and coastal exposure where resistance to fouling, salt attack, and long service life are critical.</p>
+        </div>
+
+        <div class="catalogue-detail-grid">
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint.png" alt="Oceanic Premium Antifouling Paint">
+                    <div>
+                        <span class="catalogue-chip">Marine Paint</span>
+                        <h4>Oceanic Premium Antifouling Paint</h4>
+                        <p>High-performance antifouling coating engineered to protect vessel hulls against marine growth, salt attack and prolonged water exposure.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Marine &amp; Antifouling Systems</h3>
-                    <p>High Performance Marine Paint Systems</p>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Recommended On</strong><span>Boat hulls, fishing vessels, workboats and underwater marine surfaces.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply over suitable marine primer on clean, dry and prepared substrate by brush, roller or spray.</span></div>
+                    <div class="catalogue-detail-item"><strong>Benefit</strong><span>Helps reduce barnacle and algae adhesion while improving coating endurance in service.</span></div>
                 </div>
             </div>
-            
-            <div class="highlight-box fade-in">
-                <h3><i class="fas fa-medal"></i> Quality, High Performance &amp; High Resistance</h3>
-                <p>Our marine coatings deliver anti-fouling protection, saltwater resistance, and anti-corrosion performance while reducing hull drag and increasing vessel operational efficiency.</p>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Oceanic%20Premium%20Antifouling%20Paint%20Fibre%20Coat%20Plus.png" alt="Oceanic Premium Antifouling Paint Fibre Coat Plus">
+                    <div>
+                        <span class="catalogue-chip">Marine Paint</span>
+                        <h4>Fibre Coat Plus</h4>
+                        <p>Reinforced antifouling system with fibre-enhanced structure for improved film integrity and better long-term marine protection.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Recommended On</strong><span>FRP boats, fibre boats and marine surfaces needing stronger coating film support.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Use after proper sanding and priming; maintain uniform film build for durable underwater protection.</span></div>
+                    <div class="catalogue-detail-item"><strong>Benefit</strong><span>Improves crack resistance and helps maintain coating consistency through maintenance cycles.</span></div>
+                </div>
             </div>
-            
-            <div class="products-grid">
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-shield-virus"></i> Antifouling Coating System</h4>
-                    <p>Advanced protection against marine organism growth</p>
-                    <ul class="product-features">
-                        <li>Anti-fouling protection</li>
-                        <li>Reduced hull drag</li>
-                        <li>Increased fuel efficiency</li>
-                        <li>Long service life</li>
-                        <li>Smooth self-polishing</li>
-                    </ul>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/products4-thumb(1).png" alt="Oceanic Sea Shield Antifouling">
+                    <div>
+                        <span class="catalogue-chip">Marine Paint</span>
+                        <h4>Oceanic Sea Shield Antifouling</h4>
+                        <p>Marine antifouling protection designed for harsh salinity and bio-fouling conditions with reliable coating endurance.</p>
+                    </div>
                 </div>
-                
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-layer-group"></i> Marine Anti-Corrosive Primer</h4>
-                    <p>High-build epoxy primer for underwater areas</p>
-                    <ul class="product-features">
-                        <li>Saltwater corrosion resistance</li>
-                        <li>Submerged condition durability</li>
-                        <li>Excellent adhesion</li>
-                        <li>High build formula</li>
-                        <li>Compatible with topcoats</li>
-                    </ul>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Recommended On</strong><span>Commercial craft, utility vessels and salt-heavy coastal operating environments.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply on properly sealed and primed hull surfaces with recommended recoat interval and thickness.</span></div>
+                    <div class="catalogue-detail-item"><strong>Benefit</strong><span>Supports cleaner hull performance with dependable fouling resistance in marine service.</span></div>
                 </div>
-                
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-ship"></i> Hull Protection System</h4>
-                    <p>Complete hull coating solution</p>
-                    <ul class="product-features">
-                        <li>Hull degradation prevention</li>
-                        <li>Extended coating life cycle</li>
-                        <li>Reduced dry dock maintenance</li>
-                        <li>Impact resistance</li>
-                        <li>Chemical resistance</li>
-                    </ul>
+            </div>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/products4-thumb(1).png" alt="Marine Application Notes">
+                    <div>
+                        <span class="catalogue-chip">Application Notes</span>
+                        <h4>Marine System Guidance</h4>
+                        <p>For best output, keep surface free from salt, grease, old loose paint and moisture before every coating stage.</p>
+                    </div>
                 </div>
-                
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-water"></i> Ballast Tank Coating</h4>
-                    <p>Protection for water ballast tanks</p>
-                    <ul class="product-features">
-                        <li>Immersion service protection</li>
-                        <li>Abrasion resistance</li>
-                        <li>Edge retention</li>
-                        <li>Long-term durability</li>
-                        <li>Easy application</li>
-                    </ul>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Surface Prep</strong><span>Pressure wash, de-scale, remove loose matter and ensure stable substrate before primer coat.</span></div>
+                    <div class="catalogue-detail-item"><strong>System Build</strong><span>Primer coat, intermediate support if required, then antifouling top system as per service condition.</span></div>
+                    <div class="catalogue-detail-item"><strong>Use Area</strong><span>Hull bottoms, underwater body areas and high-salinity marine operating zones.</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalogue-page-footer fade-in">
+            <div class="catalogue-process-box">
+                <h4><i class="fas fa-list-ol"></i> Marine Application Process</h4>
+                <div class="catalogue-process-steps">
+                    <div class="catalogue-process-step"><strong>Step 1</strong><span>Clean and de-rust the hull thoroughly.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 2</strong><span>Apply compatible marine primer system.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 3</strong><span>Build required coat thickness evenly.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 4</strong><span>Allow curing before launch or immersion.</span></div>
+                </div>
+            </div>
+            <div class="catalogue-uses-box">
+                <h4><i class="fas fa-water"></i> Typical Use Areas</h4>
+                <div class="catalogue-use-tags">
+                    <div class="catalogue-use-tag"><i class="fas fa-ship"></i> Fishing boats</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-anchor"></i> Cargo vessels</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-water"></i> Underwater hulls</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-sailboat"></i> Coastal craft</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Page 5: Industrial Coatings -->
+    <!-- Page 6: Industrial Paints -->
     <div class="page content-page">
-        <!-- Paint Decorations -->
         <div class="paint-splash paint-splash-1"></div>
         <div class="paint-splash paint-splash-3"></div>
         <div class="paint-drop paint-drop-1"></div>
         <div class="paint-drop paint-drop-3"></div>
         <div class="paint-drop paint-drop-4"></div>
-        <div class="paint-splatter splatter-1">
-            <div class="splatter-dot dot-1"></div>
-            <div class="splatter-dot dot-2"></div>
-            <div class="splatter-dot dot-3"></div>
-        </div>
 
         <div class="page-header">
-            <div class="page-header-icon">
-                <i class="fas fa-industry"></i>
-            </div>
+            <div class="page-header-icon"><i class="fas fa-industry"></i></div>
             <div>
                 <h2>Industrial Coatings</h2>
-                <p>Heavy-Duty Protection for Industrial Assets</p>
+                <p>Special application products for high-demand industrial environments</p>
             </div>
         </div>
-        
-        <div class="product-category">
-            <div class="category-header">
-                <div class="category-icon">
-                    <i class="fas fa-cogs"></i>
+
+        <div class="catalogue-detail-intro fade-in">
+            <h3><i class="fas fa-gears"></i> Functional Industrial Protection</h3>
+            <p>Built for technical surfaces where quick response, heat behaviour, cleanability and durable epoxy performance matter.</p>
+        </div>
+
+        <div class="catalogue-detail-grid">
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/products4-thumb(2).png" alt="Thermochromic + Antimicrobial QD Enamel">
+                    <div>
+                        <span class="catalogue-chip">Industrial Coating</span>
+                        <h4>Thermochromic + Antimicrobial QD Enamel</h4>
+                        <p>Smart industrial enamel combining heat-responsive visual behavior with antimicrobial functionality for technical surface applications.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3>Industrial Protective Systems</h3>
-                    <p>Corrosion Protection for Critical Infrastructure</p>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Recommended On</strong><span>Equipment housing, utility panels, machinery covers and technical metal surfaces.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply on clean primed metal using thin, even coats for quick-dry film and functional finish.</span></div>
+                    <div class="catalogue-detail-item"><strong>Benefit</strong><span>Supports visible thermal response with a cleaner, hygiene-focused surface film.</span></div>
                 </div>
             </div>
-            
-            <div class="products-grid">
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-building"></i> Structural Steel Coating</h4>
-                    <p>Heavy-duty protection for steel structures</p>
-                    <ul class="product-features">
-                        <li>Corrosive environment protection</li>
-                        <li>High build epoxy formula</li>
-                        <li>Excellent adhesion to steel</li>
-                        <li>UV resistant topcoat compatible</li>
-                        <li>Long maintenance intervals</li>
-                    </ul>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/products4-thumb(2).png" alt="Self Polishing + Heat Reflective Epoxy Coatings">
+                    <div>
+                        <span class="catalogue-chip">Industrial Coating</span>
+                        <h4>Self Polishing + Heat Reflective Epoxy</h4>
+                        <p>Epoxy coating system with self-polishing behavior and heat reflective performance to support durability and thermal load reduction.</p>
+                    </div>
                 </div>
-                
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-cog"></i> Machinery Enamel</h4>
-                    <p>Protective coating for industrial equipment</p>
-                    <ul class="product-features">
-                        <li>Chemical resistance</li>
-                        <li>Oil &amp; grease resistant</li>
-                        <li>High gloss finish</li>
-                        <li>Impact resistant</li>
-                        <li>Heat resistant options</li>
-                    </ul>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-umbrella-beach"></i> Coastal Infrastructure Paint</h4>
-                    <p>Specialized for coastal industrial structures</p>
-                    <ul class="product-features">
-                        <li>Saline atmosphere resistance</li>
-                        <li>High humidity protection</li>
-                        <li>Concrete &amp; steel compatible</li>
-                        <li>Weathering resistance</li>
-                        <li>Anti-carbonation properties</li>
-                    </ul>
-                </div>
-                
-                <div class="product-card fade-in">
-                    <h4><i class="fas fa-flask"></i> Chemical Resistant Coating</h4>
-                    <p>Protection against aggressive chemicals</p>
-                    <ul class="product-features">
-                        <li>Acid &amp; alkali resistance</li>
-                        <li>Solvent resistance</li>
-                        <li>High temperature options</li>
-                        <li>Tank lining applications</li>
-                        <li>Food grade options</li>
-                    </ul>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Recommended On</strong><span>Plant structures, exposed metal zones, industrial roofs and temperature-sensitive surfaces.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Use over prepared substrate with recommended primer and maintain proper curing between coats.</span></div>
+                    <div class="catalogue-detail-item"><strong>Benefit</strong><span>Delivers durable epoxy film while helping reduce thermal load on exposed structures.</span></div>
                 </div>
             </div>
         </div>
-        
-        <div class="highlight-box fade-in">
-            <h3><i class="fas fa-map-marked-alt"></i> Application Areas</h3>
-            <div class="app-grid">
-                <div class="app-item"><i class="fas fa-bolt"></i> Power Plants</div>
-                <div class="app-item"><i class="fas fa-oil-can"></i> Refineries</div>
-                <div class="app-item"><i class="fas fa-flask"></i> Chemical Plants</div>
-                <div class="app-item"><i class="fas fa-road"></i> Bridges</div>
-                <div class="app-item"><i class="fas fa-database"></i> Storage Tanks</div>
-                <div class="app-item"><i class="fas fa-stream"></i> Pipelines</div>
-                <div class="app-item"><i class="fas fa-water"></i> Offshore Platforms</div>
-                <div class="app-item"><i class="fas fa-factory"></i> Manufacturing Units</div>
-                <div class="app-item"><i class="fas fa-ship"></i> Port Structures</div>
+        <div class="catalogue-page-footer fade-in">
+            <div class="catalogue-process-box">
+                <h4><i class="fas fa-screwdriver-wrench"></i> Industrial Application Process</h4>
+                <div class="catalogue-process-steps">
+                    <div class="catalogue-process-step"><strong>Step 1</strong><span>Degrease and prepare the metal or technical surface.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 2</strong><span>Apply suitable anti-corrosive or epoxy primer.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 3</strong><span>Apply coating in controlled DFT and coverage.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 4</strong><span>Allow cure before handling or service exposure.</span></div>
+                </div>
+            </div>
+            <div class="catalogue-uses-box">
+                <h4><i class="fas fa-location-dot"></i> Typical Application Areas</h4>
+                <div class="catalogue-use-tags">
+                    <div class="catalogue-use-tag"><i class="fas fa-factory"></i> Factories</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-oil-can"></i> Refineries</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-warehouse"></i> Plant equipment</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-temperature-high"></i> Heat exposed zones</div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Page 6: Why Choose Us -->
+    <!-- Page 7: Decorative Primers & Base Coats -->
     <div class="page content-page">
-        <!-- Paint Decorations -->
         <div class="paint-splash paint-splash-1"></div>
         <div class="paint-splash paint-splash-2"></div>
         <div class="paint-drop paint-drop-2"></div>
@@ -1582,60 +1773,217 @@
         <div class="paint-stroke paint-stroke-2"></div>
 
         <div class="page-header">
-            <div class="page-header-icon">
-                <i class="fas fa-trophy"></i>
-            </div>
+            <div class="page-header-icon"><i class="fas fa-paint-roller"></i></div>
             <div>
-                <h2>Why Choose V.K. Paints?</h2>
-                <p>Our Unique Selling Propositions</p>
+                <h2>Decorative Paints</h2>
+                <p>Page 1: Primers, preparation coats and texture foundation systems</p>
             </div>
         </div>
-        
-        <div class="usp-container">
-            <div class="usp-card fade-in">
-                <div class="usp-number">01</div>
-                <h4><i class="fas fa-globe-asia"></i> Indian Climate Engineered</h4>
-                <p>Unlike conventional paints, our coatings are specifically formulated to withstand Indian climatic challenges including heavy rainfall, coastal humidity, UV exposure, and saline environments.</p>
+
+        <div class="catalogue-detail-intro fade-in">
+            <h3><i class="fas fa-brush"></i> Surface Preparation & Protection Range</h3>
+            <p>These products prepare the wall, improve hold, reduce absorption and create a stable base for long-lasting decorative topcoats.</p>
+        </div>
+
+        <div class="catalogue-detail-grid">
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Oceanic-Multipurpose-Primer.png" alt="Oceanic Multipurpose Primer">
+                    <div>
+                        <span class="catalogue-chip">Decorative Primer</span>
+                        <h4>Oceanic Multipurpose Primer</h4>
+                        <p>General-purpose primer that improves substrate hold, topcoat uniformity and long-term decorative coating life.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Interior walls, fresh plaster and maintenance repainting base preparation.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Dilute as recommended and apply one uniform primer coat before emulsion or finish coat.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Improves adhesion, shade uniformity and overall finish consistency.</span></div>
+                </div>
             </div>
-            
-            <div class="usp-card fade-in">
-                <div class="usp-number">02</div>
-                <h4><i class="fas fa-broom"></i> 100% Washable Technology</h4>
-                <p>Our interior paints feature true washable technology allowing easy stain removal without affecting the paint film, maintaining long-lasting brightness and smooth finish.</p>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/oceanic-base-coat-primer.png" alt="Oceanic Base Coat Primer">
+                    <div>
+                        <span class="catalogue-chip">Decorative Primer</span>
+                        <h4>Oceanic Base Coat Primer</h4>
+                        <p>Foundation primer to enhance topcoat lock, improve substrate sealing and stabilize decorative coat performance.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Porous surfaces, repaired walls and locations needing stronger sealer support.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply after wall cleaning and putty preparation to create an even, sealed painting base.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Supports topcoat grip and helps reduce patchiness on absorbent surfaces.</span></div>
+                </div>
             </div>
-            
-            <div class="usp-card fade-in">
-                <div class="usp-number">03</div>
-                <h4><i class="fas fa-ship"></i> Marine Expertise</h4>
-                <p>Specialized marine coatings with anti-fouling protection, saltwater resistance, and anti-corrosion performance that reduce hull drag and increase vessel operational efficiency.</p>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/oceanic-texture.png" alt="Oceanic Texture">
+                    <div>
+                        <span class="catalogue-chip">Decorative Finish Base</span>
+                        <h4>Oceanic Texture</h4>
+                        <p>Texture finish system for premium decorative effects and visual depth across feature walls and facades.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Feature walls, facade highlights and premium pattern finish requirements.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply on primed surface using texture tools or trowel to build selected pattern and decorative depth.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Creates rich textured look with added character and premium wall aesthetics.</span></div>
+                </div>
             </div>
-            
-            <div class="usp-card fade-in">
-                <div class="usp-number">04</div>
-                <h4><i class="fas fa-rupee-sign"></i> Cost-Effective Solutions</h4>
-                <p>We bridge the gap between affordability and performance, offering technically advanced coating solutions at competitive prices with reduced maintenance costs.</p>
-            </div>
-            
-            <div class="usp-card fade-in">
-                <div class="usp-number">05</div>
-                <h4><i class="fas fa-industry"></i> In-House Manufacturing</h4>
-                <p>Complete control over formulation and production ensures quality consistency, customization capabilities, and reliable supply chain for all your coating needs.</p>
-            </div>
-            
-            <div class="usp-card fade-in">
-                <div class="usp-number">06</div>
-                <h4><i class="fas fa-map-marker-alt"></i> Rural &amp; Coastal Focus</h4>
-                <p>Our journey began serving rural and coastal regions where traditional paints fail. We understand harsh weather, humidity, and saline conditions better than anyone.</p>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Oceanic-Ultra-Protek.png" alt="Oceanic Ultra Protek Ultima">
+                    <div>
+                        <span class="catalogue-chip">Decorative Protection</span>
+                        <h4>Oceanic Ultra Protek Ultima</h4>
+                        <p>Premium decorative paint with robust protection, smooth finish performance and 10 years warranty support for modern walls.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Interior and selected exterior walls needing stronger protection and clean finish.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Use over recommended primer in 2 coats with proper drying interval for full film formation.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Delivers durable decorative finish with better washability and wall protection.</span></div>
+                </div>
             </div>
         </div>
-        
-        <div class="highlight-box fade-in">
-            <h3><i class="fas fa-check-circle"></i> Quality Assurance</h3>
-            <p>Every batch undergoes rigorous testing for adhesion, coverage, washability, and weather resistance. Our coatings meet industry standards for performance and durability.</p>
+        <div class="catalogue-page-footer fade-in">
+            <div class="catalogue-process-box">
+                <h4><i class="fas fa-list-check"></i> Decorative Prep Process</h4>
+                <div class="catalogue-process-steps">
+                    <div class="catalogue-process-step"><strong>Step 1</strong><span>Remove dust, loose particles and old flaking paint.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 2</strong><span>Putty and level the wall if required.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 3</strong><span>Apply suitable primer or base coat evenly.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 4</strong><span>Proceed with texture or finish topcoats.</span></div>
+                </div>
+            </div>
+            <div class="catalogue-uses-box">
+                <h4><i class="fas fa-house"></i> Suitable Areas</h4>
+                <div class="catalogue-use-tags">
+                    <div class="catalogue-use-tag"><i class="fas fa-couch"></i> Living rooms</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-building"></i> Office interiors</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-school"></i> Institutions</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-store"></i> Retail walls</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Page 7: Contact -->
+    <!-- Page 8: Decorative Topcoats & Emulsions -->
+    <div class="page content-page">
+        <div class="paint-splash paint-splash-1"></div>
+        <div class="paint-splash paint-splash-2"></div>
+        <div class="paint-drop paint-drop-1"></div>
+        <div class="paint-drop paint-drop-4"></div>
+        <div class="paint-stroke paint-stroke-1"></div>
+        <div class="paint-stroke paint-stroke-3"></div>
+
+        <div class="page-header">
+            <div class="page-header-icon"><i class="fas fa-fill-drip"></i></div>
+            <div>
+                <h2>Decorative Paints</h2>
+                <p>Page 2: Emulsions and finish coats for interior and exterior presentation</p>
+            </div>
+        </div>
+
+        <div class="catalogue-detail-intro fade-in">
+            <h3><i class="fas fa-swatchbook"></i> Emulsion & Finish Collection</h3>
+            <p>Decorative topcoats developed for smooth appearance, color richness, everyday maintenance and weather-facing durability.</p>
+        </div>
+
+        <div class="catalogue-detail-grid">
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Oceanic-Ultra-Plus.png" alt="Oceanic Ultra Plus Apex">
+                    <div>
+                        <span class="catalogue-chip">Interior Finish</span>
+                        <h4>Oceanic Ultra Plus Apex</h4>
+                        <p>Advanced decorative emulsion designed for rich appearance, high coverage, lasting surface appeal and 5 years warranty support.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Premium interior walls where smooth look and good hiding power are required.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply 2 finish coats over prepared primer surface using brush, roller or spray.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Produces elegant wall finish with fuller shade appearance and clean visual depth.</span></div>
+                </div>
+            </div>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Shine-Interior-Emulsion.png" alt="Shine Interior Emulsion">
+                    <div>
+                        <span class="catalogue-chip">Interior Finish</span>
+                        <h4>Shine Interior Emulsion</h4>
+                        <p>Interior-focused emulsion crafted for clean finish quality and aesthetic consistency in residential and commercial spaces.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Bedrooms, halls, office rooms and spaces needing neat interior appearance.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Use over dry primer coat and apply evenly for soft sheen and controlled spread.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Creates smooth, balanced finish with pleasant interior presentation.</span></div>
+                </div>
+            </div>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Exterior-Emulsion.png" alt="Exterior Emulsion">
+                    <div>
+                        <span class="catalogue-chip">Exterior Finish</span>
+                        <h4>Exterior Emulsion</h4>
+                        <p>Weather-resistant exterior emulsion for reliable color life and improved resistance against rain, humidity and UV exposure.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Exterior walls, facades and weather-facing boundary or elevation surfaces.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply on fully cured primer or base surface in recommended exterior coat system.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Helps retain shade life and protects against seasonal rain and sunlight exposure.</span></div>
+                </div>
+            </div>
+
+            <div class="catalogue-product-card fade-in">
+                <div class="catalogue-product-head">
+                    <img src="./img/products/Oceanic-Acrylic-Distemper.png" alt="Oceanic Acrylic Distemper">
+                    <div>
+                        <span class="catalogue-chip">Economy Finish</span>
+                        <h4>Oceanic Acrylic Distemper</h4>
+                        <p>Economical acrylic distemper designed for cost-effective decorative coating with smooth appearance.</p>
+                    </div>
+                </div>
+                <div class="catalogue-detail-list">
+                    <div class="catalogue-detail-item"><strong>Best For</strong><span>Budget interior painting, rental properties and regular maintenance repaint jobs.</span></div>
+                    <div class="catalogue-detail-item"><strong>Application</strong><span>Apply on properly primed wall using brush or roller for economical decorative coverage.</span></div>
+                    <div class="catalogue-detail-item"><strong>Result</strong><span>Offers uniform matte decorative finish at cost-effective application value.</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="catalogue-page-footer fade-in">
+            <div class="catalogue-process-box">
+                <h4><i class="fas fa-paintbrush"></i> Finish Coat Application</h4>
+                <div class="catalogue-process-steps">
+                    <div class="catalogue-process-step"><strong>Step 1</strong><span>Ensure primer coat is dry and surface is smooth.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 2</strong><span>Stir and dilute as recommended for application.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 3</strong><span>Apply 2 uniform coats with proper interval.</span></div>
+                    <div class="catalogue-process-step"><strong>Step 4</strong><span>Allow complete drying before occupancy or cleaning.</span></div>
+                </div>
+            </div>
+            <div class="catalogue-uses-box">
+                <h4><i class="fas fa-map"></i> Finish Use Zones</h4>
+                <div class="catalogue-use-tags">
+                    <div class="catalogue-use-tag"><i class="fas fa-bed"></i> Bedrooms</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-city"></i> Exterior facades</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-hotel"></i> Hospitality spaces</div>
+                    <div class="catalogue-use-tag"><i class="fas fa-home"></i> Residential repainting</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 9: Contact -->
+
     <div class="page contact-page">
         <!-- Paint Decorations -->
         <div class="paint-splash paint-splash-1"></div>
@@ -1711,3 +2059,10 @@
 
 
 </body></html>
+
+
+
+
+
+
+

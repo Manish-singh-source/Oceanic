@@ -54,5 +54,8 @@ $applicationSteps = [
     'Curing and Inspection' => 'Allow full drying/curing and inspect finish uniformity before handover or service.'
 ];
 
+$video = "assets/Oceanic Premium Antifouling Paint.mp4";
+
+
 include 'product-detail-template.php';
 ?>

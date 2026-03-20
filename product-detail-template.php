@@ -265,7 +265,7 @@ $showMarineVideo = in_array($product['name'], $marineVideoProducts, true);
                     <div class="space16"></div>
                     <div class="product-video-frame">
                         <video autoplay muted loop playsinline controls preload="metadata">
-                            <source src="assets/Marine_Antifouling_Paint.mp4" type="video/mp4">
+                            <source src="<?php echo !empty($video) ? $video : 'assets/Marine_Antifouling_Paint.mp4'; ?>" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>

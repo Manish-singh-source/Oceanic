@@ -11685,6 +11685,10 @@ body {
     margin-top: 24px;
     height: auto;
 }
+.footer1-copyright-area{
+  flex-direction: column;
+  gap: 10px
+}
 }
 @media(max-width:480px){
 .swiper-wrapper {

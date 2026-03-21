@@ -118,20 +118,32 @@
                   <div class="footer-mobile-area-info">
                      <!-- <h4>Email:</h4> -->
                      <div class="space10"></div>
-                     <i class="fa-regular fa-envelope" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
-                     <a href="mailto:vkpaints78@gmail.com">vkpaints78@gmail.com</a>
+                     <div class="d-flex">
+                        <i class="fa-regular fa-envelope" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
+                        <div>
+                           <a href="mailto:vkpaints78@gmail.com">vkpaints78@gmail.com</a>
+                        </div>
+                     </div>
                   </div>
                   <div class="footer-mobile-area-info">
                      <!-- <h4>Location:</h4> -->
                      <div class="space10"></div>
-                     <i class="fa-solid fa-location-dot" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
-                     <a href="#">J-11 Gurudev Industrial Compound Sonale - 421302</a>
+                     <div class="d-flex">
+                        <i class="fa-solid fa-location-dot" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
+                        <div>
+                           <a href="#">J-11 Gurudev Industrial Compound Sonale - 421302</a>
+                        </div>
+                     </div>
                   </div>
                   <div class="footer-mobile-area-info">
                      <!-- <h4>Phone:</h4> -->
                      <div class="space10"></div>
-                     <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
-                     <a href="tel:+917900104615">+91 7900 10 4615</a>
+                     <div class="d-flex">
+                        <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
+                        <div>
+                           <a href="tel:+917900104615">+91 7900 10 4615</a>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
@@ -142,7 +154,9 @@
          </div> -->
 
          <div class="footer1-copyright-area d-flex justify-content-between">
-            <p>© <script>document.write(new Date().getFullYear());</script> Oceanic | All Rights Reserved.</p>
+            <p>© <script>
+                  document.write(new Date().getFullYear());
+               </script> Oceanic | All Rights Reserved.</p>
             <p>Design by <a href="https://technofra.com/" target="_blank">Technofra</a></p>
          </div>
 

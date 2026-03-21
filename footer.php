@@ -2,7 +2,7 @@
 <div class="footer1">
    <div class="container">
       <div class="row">
-         <div class="col-xl-3 col-lg-4 col-md-6">
+         <div class="col-xl-4 col-lg-4 col-md-6">
             <div class="footer-area-logo">
                <img src="assets/img/logo/home-01-header-logo.png" alt="">
                <div class="space16"></div>
@@ -18,12 +18,12 @@
                      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                   </li>
                   <li>
-                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                   </li>
                </ul>
             </div>
          </div>
-         <div class="col-xl col-lg-4 col-md-6">
+         <div class="col-xl-2 col-lg-4 col-md-6">
             <div class="footer-widget-area">
                <h3>Quick Links</h3>
                <div class="space28"></div>
@@ -36,7 +36,18 @@
                </ul>
             </div>
          </div>
-         <div class="col-xl col-lg-4 col-md-6">
+         <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="footer-widget-area">
+               <h3>Products</h3>
+               <div class="space28"></div>
+               <ul>
+                  <li><a href="marine-paints.php">Marine Paints</a></li>
+                  <li><a href="industrial-coatings.php">Industrial Coatings</a></li>
+                  <li><a href="decorative-paints.php">Decorative Paints</a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- <div class="col-xl col-lg-4 col-md-6">
             <div class="footer-widget-hour">
                <h4>Products</h4>
                <div class="space28"></div>
@@ -46,10 +57,10 @@
                   <li><span><a class="f-date" href="decorative-paints.php">Decorative Paints</a></span></li>
                </ul>
             </div>
-         </div>
-         <div class="col-xl col-lg-4 col-md-6">
+         </div> -->
+         <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="footer-area-gallery">
-               <h3>Gallery </h3>
+               <h3>Product Gallery </h3>
                <div class="space26"></div>
                <div class="row gx-2">
                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
@@ -82,7 +93,7 @@
                         <img src="assets/img/products/oceanic-texture.png" alt="">
                      </div>
                   </div>
-                   <div class="col-xl-4 col-lg-4 col-md-4 col-4">
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-4">
                      <div class="footer-img">
                         <img src="assets/img/products/Oceanic Premium Antifouling Paint.png" alt="">
                      </div>
@@ -101,30 +112,38 @@
             </div>
          </div>
          <div class="row footer1_bottom_fixer">
-            
+
             <div class="col-xl-12 col-lg-12">
                <div class="footer-mobile-area">
                   <div class="footer-mobile-area-info">
-                     <h4>Email:</h4>
+                     <!-- <h4>Email:</h4> -->
                      <div class="space10"></div>
-                   <a href="mailto:vkpaints78@gmail.com">vkpaints78@gmail.com</a>
+                     <i class="fa-regular fa-envelope" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
+                     <a href="mailto:vkpaints78@gmail.com">vkpaints78@gmail.com</a>
                   </div>
                   <div class="footer-mobile-area-info">
-                     <h4>Location:</h4>
+                     <!-- <h4>Location:</h4> -->
                      <div class="space10"></div>
+                     <i class="fa-solid fa-location-dot" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
                      <a href="#">J-11 Gurudev Industrial Compound Sonale - 421302</a>
                   </div>
                   <div class="footer-mobile-area-info">
-                     <h4>Phone:</h4>
+                     <!-- <h4>Phone:</h4> -->
                      <div class="space10"></div>
-                     <a href="#">+91 79001 04615</a>
+                     <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
+                     <a href="tel:+917900104615">+91 7900 10 4615</a>
                   </div>
                </div>
             </div>
          </div>
          <div class="space32"></div>
-         <div class="footer1-copyright-area">
+         <!-- <div class="footer1-copyright-area">
             <a href="#">© Copyright 2026 Oceanic . All rights reserved</a>
+         </div> -->
+
+         <div class="footer1-copyright-area d-flex justify-content-between">
+            <p>© <script>document.write(new Date().getFullYear());</script> Oceanic | All Rights Reserved.</p>
+            <p>Design by <a href="https://technofra.com/" target="_blank">Technofra</a></p>
          </div>
 
       </div>

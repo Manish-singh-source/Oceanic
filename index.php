@@ -24,12 +24,10 @@
                         inspire.</p>
                     <div class="space32"></div>
                     <div class="vl-hero9-btn-area" data-aos="zoom-in" data-aos-duration="900">
-                        <a href="about-us.php" class="vl-btn9">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="request-quote.php" class="vl-btn9">Inquiry Now <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-
-
 
         </div>
 
@@ -153,7 +151,7 @@
                     <div class="space32"></div>
                     <div class="about1-btn-area " data-aos="fade-left" data-aos-duration="1200">
                         <div class="btn_area1 mb-2">
-                            <a href="#products" class="vl-btn1">View Products<i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="products.php" class="vl-btn1">View Products<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

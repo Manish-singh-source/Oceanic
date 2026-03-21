@@ -72,7 +72,7 @@
     }
 
     .ocean-section {
-        padding: 90px 0 0;
+        padding: 30px 0 0;
     }
 
     .content-card {
@@ -116,8 +116,8 @@
         color: #2a5b82;
     }
 
-    .application-list li + li,
-    .advantage-list li + li {
+    .application-list li+li,
+    .advantage-list li+li {
         margin-top: 8px;
     }
 
@@ -281,7 +281,7 @@ $showMarineVideo = in_array($product['name'], $marineVideoProducts, true);
                 <div class="space16"></div>
                 <div class="feature-grid">
                     <?php foreach ($product['features'] as $feature): ?>
-                        <div class="feature-pill"><i class="fa-solid fa-circle-check"></i> <?php echo htmlspecialchars($feature); ?></div>
+                        <div class="feature-pill"><i class="fa-solid fa-circle-check" style="margin-right: 5px;"></i> <?php echo htmlspecialchars($feature); ?></div>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -293,15 +293,15 @@ $showMarineVideo = in_array($product['name'], $marineVideoProducts, true);
             <div class="content-card">
                 <h3>Applications</h3>
                 <div class="space12"></div>
-                <ul class="application-list">
+                <div class="feature-grid">
                     <?php foreach ($product['applications'] as $application): ?>
-                        <li><?php echo htmlspecialchars($application); ?></li>
+                        <div class="feature-pill"><i class="fa-solid fa-circle-check" style="margin-right: 5px;"></i> <?php echo htmlspecialchars($application); ?></div>
                     <?php endforeach; ?>
-                </ul>
+                </div>
             </div>
         </div>
     </section>
-<!-- 
+    <!-- 
     <section class="ocean-section">
         <div class="container">
             <div class="row gy-4">
@@ -351,17 +351,18 @@ $showMarineVideo = in_array($product['name'], $marineVideoProducts, true);
                     <div class="space12"></div>
                     <h4>Key Advantages</h4>
                     <div class="space8"></div>
-                    <ul class="advantage-list">
+                    <div class="feature-grid">
                         <?php foreach ($product['speciality']['advantages'] as $advantage): ?>
-                            <li><?php echo htmlspecialchars($advantage); ?></li>
+                            <div class="feature-pill"><i class="fa-solid fa-circle-check" style="margin-right: 5px;"></i> <?php echo htmlspecialchars($advantage); ?></div>
                         <?php endforeach; ?>
-                    </ul>
+                    </div>
+                    
                 </div>
             </div>
         </section>
     <?php endif; ?>
 
-    <section class="ocean-section" id="inquiry-section" style="padding-bottom:90px;">
+    <section class="ocean-section" id="inquiry-section" style="padding-bottom:30px;">
         <div class="container">
             <div class="content-card">
                 <h3>Inquiry Form</h3>
@@ -405,26 +406,24 @@ $showMarineVideo = in_array($product['name'], $marineVideoProducts, true);
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var form = document.getElementById('productInquiryForm');
-    var submitBtn = document.getElementById('productInquirySubmitBtn');
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('productInquiryForm');
+        var submitBtn = document.getElementById('productInquirySubmitBtn');
 
-    if (!form || !submitBtn) {
-        return;
-    }
-
-    form.addEventListener('submit', function () {
-        if (submitBtn.disabled) {
-            return false;
+        if (!form || !submitBtn) {
+            return;
         }
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Loading...';
-        submitBtn.style.opacity = '0.7';
-        submitBtn.style.cursor = 'not-allowed';
+        form.addEventListener('submit', function() {
+            if (submitBtn.disabled) {
+                return false;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Loading...';
+            submitBtn.style.opacity = '0.7';
+            submitBtn.style.cursor = 'not-allowed';
+        });
     });
-});
 </script>
 <?php include 'footer.php'; ?>
-
-

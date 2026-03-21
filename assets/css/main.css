@@ -5441,7 +5441,7 @@ img {
 .footer1 .footer-mobile-area {
   display: flex;
   justify-content: space-between;
-  margin: 25px 0px 0px 25px;
+  /* margin: 25px 0px 0px 25px; */
 }
 @media (max-width: 575px) {
   .footer1 .footer-mobile-area {
@@ -5464,11 +5464,41 @@ img {
   font-weight: var(--ztc-weight-medium);
   line-height: 18px;
 }
-.footer1 .footer-mobile-area-info a {
+/* .footer1 .footer-mobile-area-info a {
   color: var(--ztc-text-text-55);
   font-size: var(--ztc-font-size-font-s20);
   font-weight: var(--ztc-weight-bold);
   line-height: 20px;
+} */
+
+
+/* .footer1 .footer-mobile-area-info a {
+  color: #a4a4a0;
+  font-size: var(--ztc-font-size-font-s20);
+  font-weight: var(--ztc-weight-bold);
+  line-height: 20px;
+}
+.footer1 .footer-mobile-area-info a:hover {
+  color: #ffffff;
+  font-weight: var(--ztc-weight-bold);
+  line-height: 20px;
+  transform: translateX(10px);
+} */
+
+.footer1 .footer-mobile-area-info a {
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: #a4a4a0;
+  font-size: 18px;
+  font-weight: var(--ztc-weight-bold);
+  line-height: 20px;
+}
+
+.footer1 .footer-mobile-area-info a:hover {
+  color: #ffffff;
+  font-weight: var(--ztc-weight-bold);
+  line-height: 20px;
+  transform: translateX(5px);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .footer1 .footer-mobile-area-info a {
@@ -5651,6 +5681,12 @@ img {
   font-weight: var(--ztc-weight-medium);
   line-height: 18px;
 }
+.footer1-copyright-area p {
+  color: var(--ztc-text-text-66);
+  font-size: var(--ztc-font-size-font-s18);
+  font-weight: var(--ztc-weight-medium);
+  line-height: 18px;
+}
 @media (max-width: 575px) {
   .footer1-copyright-area a {
     font-size: 16px;
@@ -5658,7 +5694,7 @@ img {
 }
 
 .footer1_bottom_fixer {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .vl-footer2-area {
@@ -8167,7 +8203,7 @@ body {
   border: 1px solid #E6EBED;
   border-radius: 8px;
   text-align: center;
-  padding: 32px 0px;
+  padding: 20px 0px;
   transition: 0.4s;
 }
 .contact_inner-box:hover {

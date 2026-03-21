@@ -57,8 +57,9 @@
 
                                             </ul>
                                         </li>
-                                        <li><a href="assets/V-K-Paints-Industries-Product-Catalogue.pdf"
-                                                target="_blank">Catalogue<span> <i
+                                        <li>
+                                            <!-- <a href="assets/V-K-Paints-Industries-Product-Catalogue.pdf" -->
+                                            <a href="javascript::void()">Catalogue<span> <i
                                                         class="fa-solid fa-angle-down d-xl-inline d-none"></i></span></a>
                                             <ul class="sub-menu">
                                                 <li><a href="assets/vk-paints-2026.pdf"

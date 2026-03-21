@@ -5903,7 +5903,7 @@ body {
 .vl-header-wrap-fixxer {
   display: flex;
   align-items: center;
-  justify-content: end;
+  /* justify-content: end; */
 }
 
 .hm3_line span {
@@ -8661,6 +8661,8 @@ body {
   .testimonial1 .vl-testimonial1-info {
     display: block;
     padding: 18px 16px;
+    margin: 10px 0px;
+    gap: 10px;
   }
 }
 .testimonial1 .vl-testimonial1-info:hover .testimonial1-bio-user {

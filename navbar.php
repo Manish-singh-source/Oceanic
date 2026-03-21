@@ -132,17 +132,16 @@
                 <div class="vl-offcanvas-info">
                     <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
                     <div class="space20"></div>
-                    <span><a href="#"> <i class="fa-regular fa-envelope"></i> (234) 345-4574</a></span>
-                    <span><a href="#"><i class="fa-solid fa-phone"></i> Painting@.com</a></span>
-                    <span><a href="#"><i class="fa-solid fa-location-dot"></i> 4525 Saints Alley, Plant City, FL
-                            33564</a></span>
+                    <span><a href="mailto:vkpaints78@gmail.com"> <i class="fa-regular fa-envelope"></i>vkpaints78@gmail.com</a></span>
+                    <span><a href="tel:+917900104615"><i class="fa-solid fa-phone"></i>+91 79001 04615</a></span>
+                    <span><a href="#"><i class="fa-solid fa-location-dot"></i>J-11 Gurudev Industrial Compound Sonale - 421302</a></span>
                 </div>
                 <div class="space20"></div>
                 <div class="vl-offcanvas-social">
                     <h3 class="vl-offcanvas-sm-title">Follow Us</h3>
                     <div class="space20"></div>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>

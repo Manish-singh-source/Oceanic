@@ -115,7 +115,7 @@ function buildMailer(
 }
 
 try {
-    $logoUrl = 'https://technofra.com/oceanic/assets/img/logo/oceanic.png';
+    $logoUrl = 'https://vkpaintsindustries.com/assets/img/logo/oceanic.png';
     $safeName = esc($firstName);
     $safePhone = esc($phone);
     $safeEmail = esc($email);

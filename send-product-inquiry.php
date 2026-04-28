@@ -135,7 +135,7 @@ function buildInquiryMailer(
 }
 
 try {
-    $logoUrl = 'https://technofra.com/oceanic/assets/img/logo/oceanic.png';
+   $logoUrl = 'https://vkpaintsindustries.com/assets/img/logo/oceanic.png';
     $safeName = escInquiry($fullName);
     $safePhone = escInquiry($contactNumber);
     $safeEmail = escInquiry($email);

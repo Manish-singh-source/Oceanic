@@ -29,7 +29,7 @@
             <div class="col-xl-6 col-lg-6 col-md-12  order-2 order-lg-1" data-aos="fade-right" data-aos-duration="900">
                 <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
                             <div class="vl-about3-thumb-info">
                                 <div class="vl-about3-thumb-info-img image-anime reveal">
                                     <img src="assets/img/about/about3-thumb(1).png" alt="">
@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
                             <div class="vl-about3-thumb">
                                 <div class="vl-about3-thumb-img image-anime reveal">
                                     <img src="assets/img/about/about3-thumb(2).png" alt="">
@@ -119,7 +119,7 @@
             </div>
         </div>
         <div class="space60"></div>
-        <div class="row align-items-stretch">
+        <div class="row align-items-stretch aboutus-icon-area-box">
             <div class="col-xl-3 col-lg-6 col-md-6 mvmb-30" data-aos="fade-up" data-aos-duration="850">
                 <div class="aboutus-feature-card">
                     <div class="aboutus-feature-icon"><i class="fa-solid fa-flask"></i></div>
@@ -163,21 +163,27 @@
             <div class="col-xl-5 col-lg-12">
                 <div class="mvc-intro" data-aos="fade-right" data-aos-duration="900">
                     <h3 class="sub-title"><img src="assets/img/icon/about-subtitle-icon-hm1.svg" alt="">Mission, Vision and Core Values</h3>
-                    <div class="space22"></div>
-                    <h2 class="title text-anime-style-3">Our Strategic Direction and Operating Principles</h2>
-                    <div class="space20"></div>
-                    <p>Our strategy combines product innovation, durable performance, and responsible manufacturing. This direction helps us deliver reliable marine, decorative, and industrial coatings for Indian operating conditions.</p>
-                    <div class="space28"></div>
-                    <div class="mvc-pill-list">
-                        <span>Performance Led</span>
-                        <span>Climate Ready</span>
-                        <span>Cost Efficient</span>
+                    <div class="about-section-mvc">
+                        <div class="col-md-6 col-xl-12">
+                            <div class="space22"></div>
+                            <h2 class="title text-anime-style-3">Our Strategic Direction and Operating Principles</h2>
+                            <div class="space20"></div>
+                            <p>Our strategy combines product innovation, durable performance, and responsible manufacturing. This direction helps us deliver reliable marine, decorative, and industrial coatings for Indian operating conditions.</p>
+                            <div class="space28"></div>
+                            <div class="mvc-pill-list">
+                                <span>Performance Led</span>
+                                <span>Climate Ready</span>
+                                <span>Cost Efficient</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
+                            <img src="assets/img/about/about1.png" class="ims" alt="">
+                        </div>
                     </div>
                     
-                    <img src="assets/img/about/about1.png" class="ims" alt="">
                 </div>
             </div>
-            <div class="col-xl-7 col-lg-12 mvmt-20">
+            <div class="col-xl-7 col-lg-12 mvmt-20 mt-3 mt-xl-0">
                 <div class="row mvc-card-grid">
                     <div class="col-xl-6 col-lg-6 col-md-6" data-aos="fade-up" data-aos-duration="900">
                         <article class="mvc-card">

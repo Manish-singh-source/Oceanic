@@ -11,6 +11,38 @@
     .contact_inner-content {
         flex-grow: 1;
     }
+
+    /* Extra Small Devices (phones) */
+    @media (max-width: 575px) {}
+
+    /* Small Devices (phones landscape / small tablets) */
+    @media (min-width: 576px) and (max-width: 767px) {
+        .contactinner_from {
+            position: relative;
+            width: 100%;
+            top: 0;
+        }
+
+        .contact3-info-form {
+            margin-top: 40px;
+        }
+
+        .mb-20_brk {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Medium Devices (tablets) */
+    @media (min-width: 768px) and (max-width: 991px) {}
+
+    /* Large Devices (laptops) */
+    @media (min-width: 992px) and (max-width: 1199px) {}
+
+    /* Extra Large Devices (desktops) */
+    @media (min-width: 1200px) and (max-width: 1399px) {}
+
+    /* XXL Devices (large screens / TVs) */
+    @media (min-width: 1400px) {}
 </style>
 <?php include 'navbar.php'; ?>
 
@@ -38,7 +70,7 @@
 <div class="vl-contact_inner-box sp1">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6">
+            <div class="col-xl-4 col-lg-4 col-md-12 mb-3">
                 <div class="contact_inner-box mb-20_brk">
                     <div class="contact_inner_logo">
                         <img src="assets/img/contact/contact_innerbox-icon(1).svg" alt="">
@@ -54,8 +86,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="contact_inner-box mt-20_brk">
+            <div class="col-xl-4 col-lg-4 col-md-12 mb-3">
+                <div class="contact_inner-box">
                     <div class="contact_inner_logo">
                         <img src="assets/img/contact/contact_innerbox-icon(2).svg" alt="">
                     </div>
@@ -69,8 +101,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="contact_inner-box mt-20_brk">
+            <div class="col-xl-4 col-lg-4 col-md-12 mb-3">
+                <div class="contact_inner-box">
                     <div class="contact_inner_logo">
                         <img src="assets/img/contact/contact_innerbox-icon(3).svg" alt="">
                     </div>

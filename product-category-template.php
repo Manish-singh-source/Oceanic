@@ -29,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .product-card-thumb img {
@@ -77,6 +78,60 @@
         padding: 145px 0 80px;
     }
 }
+
+    /* Extra Small Devices (phones) */
+    @media (max-width: 575px) {
+        .product-card-thumb {
+            height: 215px;
+            background: linear-gradient(145deg, #edf5ff, #f9fcff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    }
+
+    /* Small Devices (phones landscape / small tablets) */
+    @media (min-width: 576px) and (max-width: 767px) {
+        .product-card-thumb {
+            height: 315px;
+            background: linear-gradient(145deg, #edf5ff, #f9fcff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    }
+
+    /* Medium Devices (tablets) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .product-card-thumb {
+            height: 210px;
+            background: linear-gradient(145deg, #edf5ff, #f9fcff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    }
+
+    /* Large Devices (laptops) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .product-card-thumb {
+            /* height: 275px; */
+            background: linear-gradient(145deg, #edf5ff, #f9fcff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+    }
+
+    /* Extra Large Devices (desktops) */
+    @media (min-width: 1200px) and (max-width: 1399px) {}
+
+    /* XXL Devices (large screens / TVs) */
+    @media (min-width: 1400px) {}
 </style>
 
 <div class="product-page-hero">
@@ -113,7 +168,7 @@
         <div class="space60"></div>
         <div class="row gy-4 align-items-stretch">
             <?php foreach ($products as $item): ?>
-                <div class="col-xl-4 col-lg-6">
+                <div class="col-xl-4 col-lg-6 col-md-6">
                     <article class="product-card" data-aos="fade-up" data-aos-duration="900">
                         <div class="product-card-thumb">
                             <img src="<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">

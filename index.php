@@ -95,7 +95,7 @@
                                 <h3>We’ve built A reputation <br> For quality, Reliability, <br> And Craftsmanship.</h3>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 second-img">
                             <div class="about1-box-banner-sm image-anime reveal">
                                 <img src="assets/img/about/about-box-smbanner-hm1.png" alt="">
                             </div>
@@ -440,7 +440,7 @@
                 </div>
             </div>
             <div class="space80"></div>
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
                     <div class="work1-contentbox">
                         <div class="work1-box-icon">
                             <i class="fa-solid fa-gem" aria-hidden="true"></i>
@@ -456,7 +456,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
                     <div class="work1-contentbox">
                         <div class="work1-box-icon">
                             <i class="fa-solid fa-leaf" aria-hidden="true"></i>
@@ -472,7 +472,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
                     <div class="work1-contentbox">
                         <div class="work1-box-icon">
                             <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
@@ -488,7 +488,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-5" data-aos="zoom-in" data-aos-duration="900">
                     <div class="work1-contentbox">
                         <div class="work1-box-icon">
                             <i class="fa-solid fa-headset" aria-hidden="true"></i>

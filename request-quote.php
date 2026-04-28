@@ -165,7 +165,7 @@
                     <img src="assets/img/hero/hero-9-thumb3.png" alt="Oceanic Paint Solutions">
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 mt-4 mt-md-0">
                 <div class="quote-form-card">
                     <h2>Get Your Quote</h2>
                     <p>Please fill all details below.</p>

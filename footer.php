@@ -2,7 +2,7 @@
 <div class="footer1">
    <div class="container">
       <div class="row">
-         <div class="col-xl-4 col-lg-4 col-md-6">
+         <div class="col-xxl-4 col-xl-3 col-lg-4 col-md-6">
             <div class="footer-area-logo">
                <img src="assets/img/logo/home-01-header-logo.png" alt="">
                <div class="space16"></div>
@@ -23,7 +23,7 @@
                </ul>
             </div>
          </div>
-         <div class="col-xl-2 col-lg-4 col-md-6">
+         <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6">
             <div class="footer-widget-area">
                <h3>Quick Links</h3>
                <div class="space28"></div>
@@ -36,7 +36,7 @@
                </ul>
             </div>
          </div>
-         <div class="col-xl-3 col-lg-4 col-md-6">
+         <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6">
             <div class="footer-widget-area">
                <h3>Products</h3>
                <div class="space28"></div>
@@ -58,7 +58,7 @@
                </ul>
             </div>
          </div> -->
-         <div class="col-xl-3 col-lg-4 col-md-6">
+         <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6">
             <div class="footer-area-gallery">
                <h3>Product Gallery </h3>
                <div class="space26"></div>
@@ -111,12 +111,11 @@
                </div>
             </div>
          </div>
-         <div class="row footer1_bottom_fixer">
+         <!-- <div class="row footer1_bottom_fixer">
 
-            <div class="col-xl-12 col-lg-12">
+            <div class="">
                <div class="footer-mobile-area">
-                  <div class="footer-mobile-area-info">
-                     <!-- <h4>Email:</h4> -->
+                  <div class="footer-mobile-area-info col-6 col-xl-3 order-md-1 order-xl-1">
                      <div class="space10"></div>
                      <div class="d-flex">
                         <i class="fa-regular fa-envelope" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
@@ -125,8 +124,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="footer-mobile-area-info">
-                     <!-- <h4>Location:</h4> -->
+                  <div class="footer-mobile-area-info col-12 col-xl-6 order-md-3 order-xl-2 d-flex justify-content-center">
                      <div class="space10"></div>
                      <div class="d-flex">
                         <i class="fa-solid fa-location-dot" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
@@ -135,8 +133,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="footer-mobile-area-info">
-                     <!-- <h4>Phone:</h4> -->
+                  <div class="footer-mobile-area-info col-6 col-xl-3 order-md-2 order-xl-3 d-flex justify-content-end">
                      <div class="space10"></div>
                      <div class="d-flex">
                         <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255);font-size:20px; margin-right: 5px"></i>
@@ -146,6 +143,33 @@
                      </div>
                   </div>
                </div>
+            </div>
+         </div> -->
+
+         <div class="container-fluid footer1_bottom_fixer">
+            <div class="row align-items-center text-white gy-3">
+
+               <div class="col-12 col-md-6 col-xl-3">
+                  <div class="footer-item justify-content-xl-start justify-content-xxl-start">
+                  <i class="fa-regular fa-envelope footer-icon"></i>
+                  <a href="mailto:vkpaints78@gmail.com">vkpaints78@gmail.com</a>
+                  </div>
+               </div>
+
+               <div class="col-12 col-md-12 col-xl-6">
+                  <div class="footer-item justify-content-xl-center text-center">
+                  <i class="fa-solid fa-location-dot footer-icon"></i>
+                  <a href="#">J-11 Gurudev Industrial Compound Sonale - 421302</a>
+                  </div>
+               </div>
+
+               <div class="col-12 col-md-6 col-xl-3">
+                  <div class="footer-item justify-content-xl-end justify-content-xxl-end">
+                  <i class="fa-solid fa-phone footer-icon"></i>
+                  <a href="tel:+917900104615">+91 7900 10 4615</a>
+                  </div>
+               </div>
+
             </div>
          </div>
          <div class="space32"></div>

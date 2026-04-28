@@ -23,7 +23,7 @@
                </ul>
             </div>
          </div>
-         <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6">
+         <div class="col-6 col-xxl-2 col-xl-3 col-lg-4 col-md-6">
             <div class="footer-widget-area">
                <h3>Quick Links</h3>
                <div class="space28"></div>
@@ -36,7 +36,7 @@
                </ul>
             </div>
          </div>
-         <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6">
+         <div class="col-6 col-xxl-3 col-xl-3 col-lg-4 col-md-6">
             <div class="footer-widget-area">
                <h3>Products</h3>
                <div class="space28"></div>

@@ -182,7 +182,7 @@
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
-                    <form id="quoteForm" action="send-request-quote.php" method="post">
+                    <form id="quoteForm" action="send-request-quote" method="post">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="full_name">Full Name</label>

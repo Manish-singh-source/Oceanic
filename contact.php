@@ -133,7 +133,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-6"></div>
                     <div class="col-xl-6 col-lg-6 col-md-12">
-                        <form id="contactForm" class="contact3-info-form contactinner_from xs-mt20" action="send-contact.php" method="post">
+                        <form id="contactForm" class="contact3-info-form contactinner_from xs-mt20" action="send-contact" method="post">
                             <h2 class="contactinr_fromtitle">Contact Info</h2>
                             <?php if (isset($_GET['status'])): ?>
                                 <div style="margin-bottom:16px;padding:12px;border-radius:6px;background:#f5f5f5;">

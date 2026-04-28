@@ -380,7 +380,7 @@ $showMarineVideo = in_array($product['name'], $marineVideoProducts, true);
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
-                <form id="productInquiryForm" class="inquiry-form" action="send-product-inquiry.php" method="post">
+                <form id="productInquiryForm" class="inquiry-form" action="send-product-inquiry" method="post">
                     <input type="hidden" name="redirect_to" value="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] ?? ''); ?>">
                     <div class="row gy-3">
                         <div class="col-md-6"><input type="text" name="full_name" placeholder="Full Name*" required></div>
